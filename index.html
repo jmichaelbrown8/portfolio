@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>J. Michael Brown</title>
+<style>
+	html, body {
+		font-family: calibri, arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	table, tr, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		cell-spacing: 0;
+		border-collapse: collapse;
+		border-spacing: 0;
+		vertical-align: top;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		color: inherit;
+	}
+	#nav li {
+		list-style-type: none;
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+		cursor: pointer;
+	}
+	#nav li a {
+		text-decoration: none;
+	}
+	table {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.active {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	.center {
+		text-align: center;
+	}
+	#main {
+		padding: 40px 20px;
+	}
+	#main-about {
+		display: none;
+	}
+	@media screen and (max-width: 320px) {
+		#nav li {
+			display: block;
+			width: 100%;
+		}
+	}
+</style>
+</head>
+<body>
+	<h1 class="center">J. MICHAEL BROWN<h1>
+	<h2 class="center">Front End Software Engineer</h2>
+	<ul id="nav">
+		<li class="active" id="portfolio">portfolio</li>
+		<li id="resume"><a href="J. Michael Brown - Resume.pdf" target="_blank">resume</a></li>
+		<li id="about">about</li>
+		<li id="github"><a href="https://github.com/jmichaelbrown8" target="_blank">github</a></li>
+		<li id="linkedin"><a href="https://www.linkedin.com/in/jmichaelbrown" target="_blank">linkedin</a></li>
+	</ul>
+	<div id="main">
+		<div id="main-about">
+			Yep, my name really is just J. (No, it doesn't stand for anything.)
+			<h3>How I got here:</h3>
+				<div>When I was much younger, I was a <a href="https://www.youtube.com/watch?v=T0EiU5nJunc" target="_blank">dancer</a>, which led to an interest in <a href="https://soundcloud.com/j-michael-brown-304158742" target="_blank">music and sound</a>, then <a href="" target="_blank">film</a> and <a href="https://www.instagram.com/monochromeiphone/" target="_blank">photography</a>, and now most of all <a href="https://github.com/jmichaelbrown8" target="_blank">software development</a>.
+				I've participated in all aspects of the development lifecycle as a web developer, software engineer, and Scrum Master.
+				<div>My experience as Scrum Master has framed my view of software development to always focus on delivering
+business value above all else. I value reviews, feedback, and iterating on a design to improve the product. Now, I hope to
+refocus my career on the challenging and personally rewarding aspects of being a software engineer. </div>
+				
+			<h3>What guides my work:</h3>
+				<div>I believe the best interfaces are simple, clean, and intuitive (and I think reading code should be the same).</div>
+				<div>Good design goes without being noticed and users should understand how an interface works without much instruction.</div> 
+				
+			<h3>My <a href="http://strengths.gallup.com/110440/About-StrengthsFinder-20.aspx" target="_blank">StrengthsFinder</a> results:</h3>
+			<div>Consistency <i>- I believe everyone should know and play by the same rules</i></div>
+			<div>Empathy <i>- I can put myself into other people's shoes and understand what motivates them</i></div>
+			<div>Adaptability <i>- I handle new situations in stride and can change course if needed</i></div>
+			<div>Analytical <i>- I take time to understand root cause of issues before making decisions</i></div>
+			<div>Harmony <i>- I diffuse situations and prefer when everyone gets along</i></div>
+				
+			<h3>What else interests me:</h3>
+				<div>Basketball <i>- Go Blazers!</i></div>
+				<div>Cycling <i>- My goal is to ride from Hillsboro to the coast</i></div>
+				<div>Road Trips <i>- I prefer driving over flying</i></div>
+		</div>
+
+	</div>
+	<div id="main-portfolio">
+		<a href="https://s3.amazonaws.com/claireandjtietheknot.com/index.html?X-Amz-Date=20160621T045303Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=9da783f74ee8c7b445cf438bcd398c0ff002339303038be7c81498981d80e51a&X-Amz-Credential=ASIAJSIUFYCOLY46CQRA/20160621/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=FQoDYXdzECYaDEge1kq1wHCZTXyASiLHAZEJt5GDmHMvnmZVta/ZkGlLA9G6hAZe%2BDe50GwYpoXIVJvpshEI/JzLOfixhhTfSekCyJr89dAtMG0B917VQ7b2alQUXQwcq7UzlkrSsQNYfQ9c5bJpqX7iYI/VxCiGYQX8GZuHH5SM4sPQ9WCRVw6rT24%2BortW7D6OJxDyRmTeG9gHKfqQ6PF40HJ0jIZOp8j/00%2B3b4NlxIR/2yGp6xL%2BQzpbNOfoHFmrU4NWn2VmshLR3YSPoLzxbaPrB6eFOUuiM9o0MIQokJCjuwU%3D" target="_blank">
+			<img src="" class="thumb">
+		</a>
+	</div>
+
+	<script>
+		
+		var navItems = document.getElementsByTagName('li');
+		for (var i = 0; i < navItems.length; i++) {
+			var navItem = navItems[i];
+			navItem.onclick = function(x){
+
+				document.getElementsByClassName('active')[0].removeAttribute('class');
+				this.className = 'active';
+				window.location.hash = '/' + this.id;
+				
+				if (this.id == 'about') {
+					document.getElementById('main-portfolio').style.display = 'none';
+					document.getElementById('main-about').style.display = 'block';
+				}
+				else if (this.id == 'portfolio') {
+					document.getElementById('main-portfolio').style.display = 'block';
+					document.getElementById('main-about').style.display = 'none';
+				}
+				else {
+					document.getElementById('main-portfolio').style.display = 'none';
+					document.getElementById('main-about').style.display = 'none';
+				}
+				
+			};
+		}
+		
+		// load hashState
+		var hashState = window.location.hash.replace('#/', '');
+		document.getElementById(hashState).click();
+
+	</script>
+</body>
+
+</html>
