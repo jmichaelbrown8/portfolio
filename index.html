@@ -78,7 +78,7 @@
 	#main {
 		padding: 40px 20px;
 	}
-	#main-about {
+	#main-about, #main-resume {
 		display: none;
 	}
 	@media screen and (max-width: 320px) {
@@ -184,7 +184,8 @@ refocus my career on the challenging and personally rewarding aspects of being a
 		
 		// load hashState
 		var hashState = window.location.hash.replace('#/', '');
-		document.getElementById(hashState).click();
+		if (hashState)
+			document.getElementById(hashState).click();
 
 	</script>
 </body>
