@@ -108,7 +108,7 @@
 		<div id="main-about">
 			Yep, my name really is just J. (No, it doesn't stand for anything.)
 			<h3>How I got here:</h3>
-				<div>When I was much younger, I was a <a href="https://www.youtube.com/watch?v=T0EiU5nJunc" target="_blank">dancer</a>, which led to an interest in <a href="https://soundcloud.com/j-michael-brown-304158742" target="_blank">music and sound</a>, then <a href="film.html" target="_blank">film</a> and <a href="https://www.instagram.com/monochromeiphone/" target="_blank">photography</a>, and now most of all <a href="https://github.com/jmichaelbrown8" target="_blank">software development</a>.
+				<div>When I was much younger, I was a <a href="https://www.youtube.com/watch?v=T0EiU5nJunc" target="_blank">dancer</a>, which led to an interest in <a href="https://soundcloud.com/j-michael-brown-304158742" target="_blank">music and sound</a>, then <a href="film.html" target="_blank">film</a> and <a href="https://www.instagram.com/monochromeiphone/" target="_blank">photography</a>, and now most recently <a href="https://github.com/jmichaelbrown8" target="_blank">software development</a>.
 				I've participated in all aspects of the development lifecycle as a web developer, software engineer, and Scrum Master.
 				<div>My experience as Scrum Master has framed my view of software development to always focus on delivering
 business value above all else. I value reviews, feedback, and iterating on a design to improve the product. Now, I hope to
@@ -186,6 +186,15 @@ refocus my career on the challenging and personally rewarding aspects of being a
 		var hashState = window.location.hash.replace('#/', '');
 		if (hashState)
 			document.getElementById(hashState).click();
+		
+		// google analytics
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-79758800-1', 'auto');
+		ga('send', 'pageview');
 
 	</script>
 </body>
