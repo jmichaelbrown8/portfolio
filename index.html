@@ -1,7 +1,11 @@
 <html>
 <head>
 <title>J. Michael Brown</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+	* {
+		box-sizing: border-box;
+	}
 	html, body {
 		font-family: calibri, arial, sans-serif;
 		margin: 0 auto;
@@ -33,8 +37,10 @@
 		width: 19%;
 		text-align: center;
 		cursor: pointer;
+		line-height: 44px;
 	}
-	#nav li a {
+	#nav a {
+		/* underline set by .active class */
 		text-decoration: none;
 	}
 	table {
@@ -52,6 +58,22 @@
 	.thumb {
 		width: 100%;
 		margin: 20px 0;
+	}
+	.header, .content {
+		display: inline-table;
+	}
+	.header {
+		width: 30%;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: right;
+		padding-right: 10px;
+	}
+	.content {
+		width: 69%;
+	}
+	.section {
+		padding: 10px 0;
 	}
 	#main {
 		padding: 40px 20px;
@@ -72,12 +94,17 @@
 	<h2 class="center">Front End Software Engineer</h2>
 	<ul id="nav">
 		<li class="active" id="portfolio">portfolio</li>
-		<li id="resume"><a href="J. Michael Brown - Resume.pdf" target="_blank">resume</a></li>
+		<li id="resume">resume</li>
 		<li id="about">about</li>
-		<li id="github"><a href="https://github.com/jmichaelbrown8" target="_blank">github</a></li>
-		<li id="linkedin"><a href="https://www.linkedin.com/in/jmichaelbrown" target="_blank">linkedin</a></li>
+		<a href="https://github.com/jmichaelbrown8" target="_blank"><li id="github">github</li></a>
+		<a href="https://www.linkedin.com/in/jmichaelbrown" target="_blank"><li id="linkedin">linkedin</li></a>
 	</ul>
 	<div id="main">
+		<div id="main-resume"><!-- exported from google docs -->
+			<object data="J. Michael Brown - Resume.pdf#view=fit" type="application/pdf" width="100%" height="100%">
+			  alt : <a href="J. Michael Brown - Resume.pdf" target="_blank">J. Michael Brown - Resume.pdf</a>
+			</object>
+		</div>
 		<div id="main-about">
 			Yep, my name really is just J. (No, it doesn't stand for anything.)
 			<h3>How I got here:</h3>
@@ -137,17 +164,19 @@ refocus my career on the challenging and personally rewarding aspects of being a
 				this.className = 'active';
 				window.location.hash = '/' + this.id;
 				
+				// clear out main pages
+				document.getElementById('main-resume').style.display = 'none';
+				document.getElementById('main-portfolio').style.display = 'none';
+					document.getElementById('main-about').style.display = 'none';
+				
 				if (this.id == 'about') {
-					document.getElementById('main-portfolio').style.display = 'none';
 					document.getElementById('main-about').style.display = 'block';
 				}
 				else if (this.id == 'portfolio') {
 					document.getElementById('main-portfolio').style.display = 'block';
-					document.getElementById('main-about').style.display = 'none';
 				}
-				else {
-					document.getElementById('main-portfolio').style.display = 'none';
-					document.getElementById('main-about').style.display = 'none';
+				else if (this.id == 'resume') {
+					document.getElementById('main-resume').style.display = 'block';
 				}
 				
 			};
