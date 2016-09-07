@@ -47,7 +47,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	.active {
 		font-weight: bold;
 		text-decoration: underline;
@@ -81,6 +81,13 @@
 	#main-about, #main-resume {
 		display: none;
 	}
+	#portrait-container {
+		text-align: center;
+	}
+	#portrait {
+		border-radius: 100%;
+		padding-bottom: 40px;
+	}
 	@media screen and (max-width: 320px) {
 		#nav li {
 			display: block;
@@ -101,11 +108,13 @@
 	</ul>
 	<div id="main">
 		<div id="main-resume"><!-- exported from google docs -->
-			<object data="J. Michael Brown - Resume.pdf#view=fit" type="application/pdf" width="100%" height="100%">
-			  alt : <a href="J. Michael Brown - Resume.pdf" target="_blank">J. Michael Brown - Resume.pdf</a>
+			<object data="J. Michael Brown - Resume.pdf" type="application/pdf" width="100%" height="100%">
+			  Your browser doesn't support embedded PDFs.
 			</object>
+			<a href="J. Michael Brown - Resume.pdf" target="_blank">download</a>
 		</div>
 		<div id="main-about">
+			<div id="portrait-container"><img id="portrait" src="media/portrait.png"/></div>
 			Yep, my name really is just J. (No, it doesn't stand for anything.)
 			<h3>How I got here:</h3>
 				<div>When I was much younger, I was a <a href="https://www.youtube.com/watch?v=T0EiU5nJunc" target="_blank">dancer</a>, which led to an interest in <a href="https://soundcloud.com/j-michael-brown-304158742" target="_blank">music and sound</a>, then <a href="film.html" target="_blank">film</a> and <a href="https://www.instagram.com/monochromeiphone/" target="_blank">photography</a>, and now most recently <a href="https://github.com/jmichaelbrown8" target="_blank">software development</a>.
@@ -113,18 +122,18 @@
 				<div>My experience as Scrum Master has framed my view of software development to always focus on delivering
 business value above all else. I value reviews, feedback, and iterating on a design to improve the product. Now, I hope to
 refocus my career on the challenging and personally rewarding aspects of being a software engineer. </div>
-				
+
 			<h3>What guides my work:</h3>
 				<div>I believe the best interfaces are simple, clean, and intuitive (and I think reading code should be the same).</div>
-				<div>Good design goes without being noticed and users should understand how an interface works without much instruction.</div> 
-				
+				<div>Good design goes without being noticed and users should understand how an interface works without much instruction.</div>
+
 			<h3>My <a href="http://strengths.gallup.com/110440/About-StrengthsFinder-20.aspx" target="_blank">StrengthsFinder</a> results:</h3>
 			<div>Consistency <i>- I believe everyone should know and play by the same rules</i></div>
 			<div>Empathy <i>- I can put myself into other people's shoes and understand what motivates them</i></div>
 			<div>Adaptability <i>- I handle new situations in stride and can change course if needed</i></div>
 			<div>Analytical <i>- I take time to understand root cause of issues before making decisions</i></div>
 			<div>Harmony <i>- I diffuse situations and prefer when everyone gets along</i></div>
-				
+
 			<h3>What else interests me:</h3>
 				<div>Basketball <i>- Go Blazers!</i></div>
 				<div>Cycling <i>- My goal is to ride from Hillsboro to the coast</i></div>
@@ -151,10 +160,13 @@ refocus my career on the challenging and personally rewarding aspects of being a
 		<a href="https://s3.amazonaws.com/claireandjtietheknot.com/index.html" target="_blank">
 			<img src="media/wedding.jpg" class="thumb">
 		</a>
+		<!-- portfolio site -->
+		<h2>This Portfolio</h2>
+		<div>I built this portfolio site as a basic example of my vanilla HTML, CSS, JS skills. I intentionally included no libraries (although I did add google analytics) and made sure to include page state, mobile responsiveness and touch target optimization. Go ahead and view source!</div>
 	</div>
 
 	<script>
-		
+
 		var navItems = document.getElementsByTagName('li');
 		for (var i = 0; i < navItems.length; i++) {
 			var navItem = navItems[i];
@@ -163,12 +175,12 @@ refocus my career on the challenging and personally rewarding aspects of being a
 				document.getElementsByClassName('active')[0].removeAttribute('class');
 				this.className = 'active';
 				window.location.hash = '/' + this.id;
-				
+
 				// clear out main pages
 				document.getElementById('main-resume').style.display = 'none';
 				document.getElementById('main-portfolio').style.display = 'none';
-					document.getElementById('main-about').style.display = 'none';
-				
+				document.getElementById('main-about').style.display = 'none';
+
 				if (this.id == 'about') {
 					document.getElementById('main-about').style.display = 'block';
 				}
@@ -178,15 +190,15 @@ refocus my career on the challenging and personally rewarding aspects of being a
 				else if (this.id == 'resume') {
 					document.getElementById('main-resume').style.display = 'block';
 				}
-				
+
 			};
 		}
-		
+
 		// load hashState
 		var hashState = window.location.hash.replace('#/', '');
 		if (hashState)
 			document.getElementById(hashState).click();
-		
+
 		// google analytics
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
