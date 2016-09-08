@@ -115,6 +115,11 @@
 			display: none;
 		}
 
+		#main-resume object{
+			position: absolute;
+			left: 0;
+		}
+
 		#portrait-container {
 			text-align: center;
 		}
@@ -169,7 +174,7 @@
 	<div id="main">
 		<div id="main-resume">
 			<!-- exported from google docs -->
-			<object data="J. Michael Brown - Resume.pdf" type="application/pdf" width="100%" height="100%">
+			<object data="J. Michael Brown - Resume.pdf#view=fitH" type="application/pdf" width="100%" height="100%">
 				Your browser doesn't support embedded PDFs.
 			</object>
 			<a href="J. Michael Brown - Resume.pdf" target="_blank">download</a>
@@ -228,6 +233,7 @@
 		</div>
 
 		<script>
+
 			var navItems = document.getElementsByTagName('li');
 			for (var i = 0; i < navItems.length; i++) {
 				var navItem = navItems[i];
