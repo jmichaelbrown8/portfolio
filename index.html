@@ -7,12 +7,15 @@
 		box-sizing: border-box;
 	}
 	html, body {
-		font-family: calibri, arial, sans-serif;
+		font-family: monospace;
+		font-size: 18px;
 		margin: 0 auto;
 		padding: 0;
 		width: 100%;
 		height: 100%;
-		max-width: 720px;
+		max-width: 900px;
+		background-color:#EFEFEF;
+		color:#333333;
 	}
 	table, tr, td {
 		margin: 0;
@@ -29,15 +32,21 @@
 		padding: 0;
 	}
 	a {
-		color: inherit;
+		color: #B82601;
+	}
+	#nav {
+		text-align: center;
+		border: 0 solid #333333;
+		border-width: 1px 0;
 	}
 	#nav li {
 		list-style-type: none;
 		display: inline-block;
-		width: 19%;
-		text-align: center;
 		cursor: pointer;
 		line-height: 44px;
+		color: #B82601;
+		text-align: center;
+		margin: 0 4px;
 	}
 	#nav a {
 		/* underline set by .active class */
@@ -88,23 +97,46 @@
 		border-radius: 100%;
 		padding-bottom: 40px;
 	}
-	@media screen and (max-width: 320px) {
-		#nav li {
+	#nav li#menu {
+		display: none;
+		float: right;
+		width: 44px;
+	}
+	@media screen and (max-width: 500px) {
+		#nav {
+			padding-left: 20px;
+			text-align: left;
+		}
+		#nav li:not(.active) {
+			display: none;
+		}
+		#nav li#menu {
 			display: block;
-			width: 100%;
+		}
+		#nav li:not(#menu) {
+			text-align: left;
+		}
+		#nav.open li {
+			display: block;
+		}
+
+		h1, h2 {
+			font-size: 1rem;
 		}
 	}
+
 </style>
 </head>
 <body>
-	<h1 class="center">J. MICHAEL BROWN<h1>
+	<h1 class="center">J. MICHAEL BROWN</h1>
 	<h2 class="center">Front End Software Engineer</h2>
 	<ul id="nav">
+		<li id="menu">&#9776;</li>
 		<li class="active" id="portfolio">portfolio</li>
 		<li id="resume">resume</li>
 		<li id="about">about</li>
-		<a href="https://github.com/jmichaelbrown8" target="_blank"><li id="github">github</li></a>
-		<a href="https://www.linkedin.com/in/jmichaelbrown" target="_blank"><li id="linkedin">linkedin</li></a>
+		<li id="github"><a href="https://github.com/jmichaelbrown8" target="_blank">github</a></li>
+		<li id="linkedin"><a href="https://www.linkedin.com/in/jmichaelbrown" target="_blank">linkedin</a></li>
 	</ul>
 	<div id="main">
 		<div id="main-resume"><!-- exported from google docs -->
@@ -172,6 +204,21 @@ refocus my career on the challenging and personally rewarding aspects of being a
 			var navItem = navItems[i];
 			navItem.onclick = function(x){
 
+				var nav = document.getElementById('nav');
+
+				if (this.id == 'menu') {
+					if (!nav.className) {
+							nav.className = 'open';
+					}
+					else {
+							nav.className = '';
+					}
+					return;
+				}
+
+				// hide nav
+				nav.className = '';
+
 				document.getElementsByClassName('active')[0].removeAttribute('class');
 				this.className = 'active';
 				window.location.hash = '/' + this.id;
@@ -180,6 +227,7 @@ refocus my career on the challenging and personally rewarding aspects of being a
 				document.getElementById('main-resume').style.display = 'none';
 				document.getElementById('main-portfolio').style.display = 'none';
 				document.getElementById('main-about').style.display = 'none';
+
 
 				if (this.id == 'about') {
 					document.getElementById('main-about').style.display = 'block';
