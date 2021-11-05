@@ -1,0 +1,84 @@
+/* Header Styles */
+
+h1,
+h2 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+a {
+    color: #B82601;
+}
+
+nav ul {
+    text-align: center;
+    border: 0 solid #333333;
+    border-width: 1px 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 44px;
+    color: #B82601;
+    text-align: center;
+    margin: 0 4px;
+}
+
+nav a {
+    /* underline set by .active class */
+    text-decoration: none;
+    /* makes sure the whole link works in mobile mode */
+    display: block;
+}
+
+
+/* Main Content Styles */
+h3 {
+    padding: 10px 0;
+}
+
+.thumb {
+    width: 100%;
+    margin: 20px 0;
+}
+
+section {
+    padding: 10px 0;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+#main-portfolio,
+#main-resume {
+    display: none;
+}
+
+#resume-pdf {
+    min-height: 400px;
+}
+
+#portrait-container {
+    text-align: center;
+}
+
+#portrait {
+    border-radius: 100%;
+    padding-bottom: 40px;
+}
+
+#nav li#menu {
+    display: none;
+    float: right;
+    width: 44px;
+}
+
+@media screen and (max-width: 500px) {
+    h1,
+    h2 {
+        font-size: 1rem;
+    }
+}
