@@ -1,0 +1,68 @@
+/* Mobile Switch */
+@media screen and (max-width: 50em) {
+    /* Header */
+    header {
+        display: block;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: space-around;
+    }
+
+    nav a {
+        /* flex: 0 0 2em; */
+        line-height: 200%;
+    }
+
+    #banner {
+        /* display: none; */
+    }
+
+    /* Main */
+    main section::before {
+        position: relative;
+        top: -1em;
+        left: 0;
+        text-align: left;
+    }
+
+    main section {
+        width: 100%;
+        margin: 0;
+        padding: 2em 1em 0 1em;
+    }
+
+    #work {
+        flex-direction: column;
+    }
+
+    #work div:first-child {
+        flex: 0 0 20em;
+    }
+
+    #work div{
+        flex: 0 0 10em;
+    }
+
+    #contact {
+        flex-direction: column;
+
+    }
+}
+
+/* Devices that don't support hover */
+@media (hover: none) {
+    img {
+        opacity: 100%;
+    }
+
+    #work a,
+    #work span {
+        border: .2em solid dimgray;
+    }
+}

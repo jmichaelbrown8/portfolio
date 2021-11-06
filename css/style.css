@@ -1,91 +1,134 @@
-/* Header Styles */
-
-h1,
-h2 {
-    text-align: center;
-    padding: 10px 0;
+/* Base Page Styles */
+html,
+body {
+    font-family: monospace;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    background-color: #333333;
+    color: whitesmoke;
 }
 
 a {
-    color: #B82601;
+    /* color:aquamarine;
+    color:deepskyblue; */
+    color:lightblue;
 }
 
-nav ul {
-    text-align: center;
-    border: 0 solid #333333;
-    border-width: 1px 0;
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav li {
-    list-style-type: none;
-    display: inline-block;
-    cursor: pointer;
-    color: #B82601;
-    text-align: center;
-    margin: 0 4px;
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
 }
 
 nav a {
-    /* underline set by .active class */
-    text-decoration: none;
-    /* makes sure the whole link works in mobile mode */
+    margin: 0 1em;
+}
+
+/* Hero Image */
+#banner {
+    background: dimgray;
+    height: 10em;
+    position: relative;
+}
+
+#banner div {
+    background: whitesmoke;
+    color: #333333;
+    position: absolute;
+    right: 0;
+    bottom: 1em;
+}
+
+/* Main Styles */
+main section {
+    padding-left: 10em;
+    padding-right: 5em;
+    padding-top: 4em;
+    position: relative;
+}
+
+main section:last-child {
+    padding-bottom: 4em;
+}
+
+main section::before {
+    content: attr(id);
     display: block;
+    position: absolute;
+    left: 2em;
+    width: 4em;
+    text-align: right;
+    font-weight: bold;
+    font-size: 120%;
 }
 
-
-/* Main Content Styles */
-h3 {
-    padding: 10px 0;
+p {
+    margin-bottom: 1em;
 }
 
-ul {
+/* About */
+
+/* Work */
+#work {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-li {
-    flex:0 0 0;
-    margin: 10px;
-    padding: 10px;
+#work div:first-child {
+    flex: 0 0 100%;
+    height: 40em;
 }
 
-.thumb {
+#work div {
+    flex: 0 0 49%;
+    height: 20em;
+    position: relative;
+    background-size: cover;
+    border: .5em solid lightblue;
+    margin: 0 0 1em 0;
+    overflow: hidden;
+}
+
+img {
     width: 100%;
-    margin: 20px 0;
+    opacity: 35%;
+    transition: opacity .3s ease-in-out;
 }
 
-section {
-    padding: 10px 0;
+img:hover {
+    opacity: 100%;
+    
 }
 
-main {
-    padding: 40px 20px;
+#work div a,
+#work div span {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background-color: ghostwhite;
+    color: #333333;
+    padding: .1em;
 }
 
-#resume-pdf {
-    min-height: 400px;
+/* Contact */
+#contact {
+    display: flex;
+    justify-content: flex-start;
 }
 
-#portrait-container {
-    text-align: center;
+#contact a {
+    margin: 0 1em 1em 0;
 }
 
-#portrait {
-    border-radius: 100%;
-    padding-bottom: 40px;
-}
 
-@media screen and (max-width: 45em) {
-    h1,
-    h2 {
-        font-size: 1rem;
-    }
-
-    ul {
-        flex-direction: column;
-    }
-
-    li {
-        padding: 0;
-    }
-}
