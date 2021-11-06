@@ -51,32 +51,33 @@ nav a {
 
 /* Main Styles */
 main section {
-    padding-left: 10em;
-    padding-right: 5em;
-    padding-top: 4em;
+    margin-left: 8em;
+    margin-right: 5em;
+    margin-top: 4em;
+    padding-left: 1em;
     position: relative;
+    border-left: .4em solid lightblue;
 }
 
 main section:last-child {
-    padding-bottom: 4em;
+    margin-bottom: 4em;
 }
 
 main section::before {
     content: attr(id);
     display: block;
     position: absolute;
-    left: 2em;
+    left: -6em;
     width: 4em;
     text-align: right;
     font-weight: bold;
     font-size: 120%;
 }
 
+/* About */
 p {
     margin-bottom: 1em;
 }
-
-/* About */
 
 /* Work */
 #work {
@@ -88,6 +89,7 @@ p {
 #work div:first-child {
     flex: 0 0 100%;
     height: 40em;
+    margin: 0;
 }
 
 #work div {
@@ -96,7 +98,7 @@ p {
     position: relative;
     background-size: cover;
     border: .5em solid lightblue;
-    margin: 0 0 1em 0;
+    margin: 1em 0 0 0;
     overflow: hidden;
 }
 

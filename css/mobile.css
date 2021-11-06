@@ -19,9 +19,9 @@
         line-height: 200%;
     }
 
-    #banner {
-        /* display: none; */
-    }
+    /* #banner {
+        display: none;
+    } */
 
     /* Main */
     main section::before {
@@ -29,16 +29,21 @@
         top: -1em;
         left: 0;
         text-align: left;
+        border-bottom: .2em solid lightblue;
+        padding-bottom: .4em;
+        max-width: fit-content;
     }
 
     main section {
         width: 100%;
         margin: 0;
         padding: 2em 1em 0 1em;
+        border: 0;
     }
 
     #work {
         flex-direction: column;
+        padding: 2em 1em 1em 1em;
     }
 
     #work div:first-child {
@@ -49,6 +54,7 @@
         flex: 0 0 10em;
     }
 
+    /* Contact */
     #contact {
         flex-direction: column;
 
