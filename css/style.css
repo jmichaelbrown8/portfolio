@@ -9,7 +9,7 @@
 
     /* Dark Mode */
     --background: #222222;
-    --color: whitesmoke;
+    --color: #ffffff;
     --highlight: lightblue;
 
     --banner-radius: 30em 0 0 30em;
@@ -51,16 +51,21 @@ nav a {
 /* Hero Image */
 #banner {
     background: dimgray;
+    background-image: url(../media/mthood-banner.jpg);
+    background-position: center bottom;
+    background-size: cover;
     height: 10em;
     position: relative;
 }
 
 #banner div {
-    background: var(--color);
+    /* background: var(--color)ff; */
+    backdrop-filter: blur(1em);
+    /* text-shadow: 1px 0 var(--color); */
     color: var(--background);
     position: absolute;
     right: 0;
-    bottom: 1em;
+    top: 1em;
     font-style: italic;
     padding: .4em;
     border-radius: var(--banner-radius);
