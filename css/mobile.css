@@ -57,7 +57,7 @@
 
 /* Devices that don't support hover */
 @media (hover: none) {
-    img {
+    #work img {
         opacity: 100%;
     }
 

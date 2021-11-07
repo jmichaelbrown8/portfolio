@@ -11,6 +11,8 @@
     --background: #222222;
     --color: whitesmoke;
     --highlight: lightblue;
+
+    --banner-radius: 30em 0 0 30em;
 }
 
 html,
@@ -61,6 +63,9 @@ nav a {
     bottom: 1em;
     font-style: italic;
     padding: .4em;
+    border-radius: var(--banner-radius);
+    max-width: 80%;
+    text-align: right;
 }
 
 /* Main Styles */
@@ -115,31 +120,52 @@ p {
     height: 17em;
     position: relative;
     background-size: cover;
-    border: .5em solid var(--highlight);
+    border: .2em solid var(--color);
     margin: 1em 0 0 0;
     overflow: hidden;
 }
 
+#work [data-tech]::after{
+    opacity: 0%;
+}
+
+#work div:hover [data-tech]::after{
+    content: attr(data-tech);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--color);
+    font-style: italic;
+    padding: 0 .2em;
+    opacity: 100%;
+    transition: opacity .3s ease-in-out;
+}
+
 img {
     width: 100%;
+}
+
+#work img {
     opacity: 35%;
     transition: opacity .3s ease-in-out;
 }
 
-img:hover {
+#work div:hover img {
     opacity: 100%;
-    
 }
 
 #work div a,
 #work div span {
     position: absolute;
-    right: 1em;
+    right: 0;
     bottom: 1em;
     /* Color and Background are swapped on work tiles */
     background-color: var(--color);
     color: var(--background);
-    padding: .1em;
+    padding: .4em;
+    border-radius: var(--banner-radius);
+    text-align: right;
+    max-width: 80%;
 }
 
 /* Contact */
