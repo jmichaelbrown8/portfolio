@@ -179,3 +179,34 @@ img {
 }
 
 
+
+/* Crazy Rainbow Experiment */
+#rainbow * {
+    border-radius: 10em 0 0 0;
+    text-align: right;
+    margin-left: 1.2em;
+    border: 1px solid white;
+    border-bottom: 0;
+    border-right: 0;
+    line-height: 1.2em;
+}
+
+#rainbow > div {
+    margin-left: 0;
+    background-color: red;
+}
+#rainbow > div > div {
+    background-color: orange;
+}
+#rainbow > div > div > div {
+    background-color: yellow;
+}
+#rainbow > div > div > div > div {
+    background-color: green;
+}
+#rainbow > div > div > div > div > div {
+    background-color: blue;
+}
+#rainbow > div > div > div > div > div > div {
+    background-color: purple;
+}
