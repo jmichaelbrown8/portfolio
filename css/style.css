@@ -1,5 +1,13 @@
 /* Base Page Styles */
 :root {
+    /* Light Mode */
+    /*
+    --background: #EFEFEF;
+    --color: #333333;
+    --highlight: #B82601;
+     */
+
+    /* Dark Mode */
     --background: #333333;
     --color: whitesmoke;
     /* deepskyblue, aquamarine */
