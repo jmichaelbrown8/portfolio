@@ -1,4 +1,10 @@
 /* Base Page Styles */
+:root {
+    --background: #333333;
+    --color: whitesmoke;
+    --highlight: lightblue;
+}
+
 html,
 body {
     font-family: monospace;
@@ -6,14 +12,14 @@ body {
     width: 100%;
     height: 100%;
     max-width: 900px;
-    background-color: #333333;
-    color: whitesmoke;
+    background-color: var(--background);
+    color: var(--color);
 }
 
 a {
     /* color:aquamarine;
     color:deepskyblue; */
-    color:lightblue;
+    color:var(--highlight);
 }
 
 /* Header Styles */
@@ -42,8 +48,8 @@ nav a {
 }
 
 #banner div {
-    background: whitesmoke;
-    color: #333333;
+    background: var(--color);
+    color: var(--background);
     position: absolute;
     right: 0;
     bottom: 1em;
@@ -58,7 +64,7 @@ main section {
     margin-top: 4em;
     padding-left: 1em;
     position: relative;
-    border-left: .4em solid lightblue;
+    border-left: .4em solid var(--highlight);
 }
 
 main section:last-child {
@@ -99,7 +105,7 @@ p {
     height: 20em;
     position: relative;
     background-size: cover;
-    border: .5em solid lightblue;
+    border: .5em solid var(--highlight);
     margin: 1em 0 0 0;
     overflow: hidden;
 }
@@ -120,8 +126,9 @@ img:hover {
     position: absolute;
     right: 1em;
     bottom: 1em;
-    background-color: ghostwhite;
-    color: #333333;
+    /* Color and Background are swapped on work tiles */
+    background-color: var(--color);
+    color: var(--background);
     padding: .1em;
 }
 
