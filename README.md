@@ -17,6 +17,18 @@ This static website was built to display some of my coding projects and advertis
 * Clone the repo
 * Open index.html in your browser
 
+## Deployment
+
+This portfolio is deployed using GitHub pages at this link: [https://jmichaelbrown8.github.io/portfolio/](https://jmichaelbrown8.github.io/portfolio/)
+
+### Desktop
+
+<img src="./media/desktop.png" alt="Desktop screenshot" />
+
+### Mobile
+
+<img src="./media/mobile.png" alt="Mobile screenshot" />
+
 ## License
 
 [MIT](./LICENSE)
