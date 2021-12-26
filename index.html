@@ -7,7 +7,6 @@
     <title>J. Michael Brown</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mobile.css">
 </head>
 <body>
     <!-- Header -->
@@ -30,7 +29,8 @@
 
         <!-- About Me -->
         <section id="about">
-            <p>I'm a software engineer with 5+ years of front end web experience and 10+ years of industry experience working with agile software teams and fostering communities of practice.</p>
+            <label for="about">about</label>
+            <p>I'm a full-stack software engineer with 5+ years of front end web experience and 10+ years of industry experience working with agile software teams and fostering communities of practice.</p>
             <p>Skilled in HTML, CSS, JavaScript, React, AWS, and coaching agile methodologies.</p>
             <p>Background in <a href="https://soundcloud.com/j-michael-brown-304158742">music</a>, <a href="./film.html">animation</a>, <a href="https://www.instagram.com/monochromeiphone/">photography</a> <a href="https://www.instagram.com/kodachromeiphone/">(2)</a>, and digital media.</p> 
             <!-- Could add links to... senior CAT projects theremin?, record player? -->
@@ -39,30 +39,24 @@
 
         <!-- Work (Project Ideas: Polaroid Gallery, Tape Deck Music Player, Record Player, Color Palette Generator, ) -->
         <section id="work">
-            <div>
-                <img src="./media/cms.jpg" alt="content management system">
-                <span data-tech="jQuery">Content Management System</span>
+            <label for="work">work</label>
+            <div id="work-grill" class="hero" data-portrait="./media/grill-mobile.png" data-landscape="./media/grill-desktop.png">
+                <a href="https://jmichaelbrown8.github.io/grill" data-tech="jQuery">Grill: Food and Friends</a>
             </div>
-            <div>
-                <img src="./media/conferencetool.jpg" alt="conference tool">
-                <span data-tech="AngularJS">Conference Tool</span>
-            </div>
-            <div>
-                <img src="./media/wedding.jpg" alt="wedding website">
+            <div id="work-wedding">
                 <a href="https://jmichaelbrown8.github.io/weddingsite/" data-tech="jQuery">Wedding Website</a>
             </div>
-            <div>
-                <img src="./media/compoundinterest.jpg" alt="compound interest calculator">
+            <div id="work-interest">
                 <a href="https://jmichaelbrown8.github.io/compoundinterest/" data-tech="JavaScript">Interest Calc</a>
             </div>
-            <div>
-                <img src="./media/scrumgame.jpg" alt="scrum game">
+            <div id="work-scrumgame">
                 <a href="https://agility.help/scrumgame/" data-tech="React">Scrum Game</a>
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact">
+            <label for="contact">contact</label>
             <a href="tel:5037028810">503.702.8810</a>
             <a href="mailto:jmichaelbrown8@gmail.com">jmichaelbrown8@gmail.com</a>
             <a href="https://github.com/jmichaelbrown8">GitHub</a>

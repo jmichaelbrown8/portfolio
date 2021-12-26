@@ -87,8 +87,7 @@ main section:last-child {
     margin-bottom: 4em;
 }
 
-main section::before {
-    content: attr(id);
+label {
     display: block;
     position: absolute;
     left: -6em;
@@ -114,7 +113,13 @@ p {
     justify-content: space-between;
 }
 
-#work div:first-child {
+#work::backdrop {
+    width:100%;
+    height:100%;
+    background-color: red;
+}
+
+#work div.hero {
     flex: 0 0 100%;
     height: 35em;
     margin: 0;
@@ -124,14 +129,14 @@ p {
     flex: 0 0 49%;
     height: 17em;
     position: relative;
-    background-size: cover;
     border: .2em solid var(--color);
     margin: 1em 0 0 0;
     overflow: hidden;
 }
 
 #work [data-tech]::after{
-    opacity: 0%;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 
 #work div:hover [data-tech]::after{
@@ -142,21 +147,7 @@ p {
     background-color: var(--color);
     font-style: italic;
     padding: 0 .2em;
-    opacity: 100%;
-    transition: opacity .3s ease-in-out;
-}
-
-img {
-    width: 100%;
-}
-
-#work img {
-    opacity: 35%;
-    transition: opacity .3s ease-in-out;
-}
-
-#work div:hover img {
-    opacity: 100%;
+    opacity: 1;
 }
 
 #work div a,
@@ -184,3 +175,116 @@ img {
 }
 
 
+
+/* Images */
+
+#work div {
+    position: relative;
+}
+
+#work div::before {
+    position: absolute;
+    content: " ";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.35;
+    background-size: cover;
+    transition: opacity .3s ease-in-out;
+}
+
+#work div:hover::before {
+    opacity: 0.65;
+}
+
+#work-grill::before {
+    background-image: url(../media/grill-mobile.png)
+}
+
+#work-wedding::before {
+    background-image: url(../media/wedding.jpg)
+}
+
+#work-interest::before {
+    background-image: url(../media/compoundinterest.jpg)
+}
+
+#work-scrumgame::before {
+    background-image: url(../media/scrumgame.jpg)
+}
+
+
+@media (orientation: landscape) {
+    #work-grill::before {
+        background-image: url(../media/grill-desktop.png)
+    }
+}
+
+@media (orientation: portrait) {
+
+}
+
+/* Mobile Switch */
+@media screen and (max-width: 50em) {
+    /* Header */
+    header {
+        display: block;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: space-around;
+    }
+
+    nav a {
+        line-height: 200%;
+    }
+
+    /* Main */
+    label {
+        position: relative;
+        top: -1em;
+        left: 0;
+        text-align: left;
+        border-bottom: .2em solid var(--highlight);
+        padding-bottom: .4em;
+        max-width: fit-content;
+    }
+
+    main section {
+        width: 100%;
+        margin: 0;
+        padding: 2em 1em 0 1em;
+        border: 0;
+    }
+
+    #work {
+        flex-direction: column;
+        padding: 2em 1em 1em 1em;
+    }
+
+    #work div.hero {
+        flex: 0 0 20em;
+    }
+
+    #work div{
+        flex: 0 0 10em;
+    }
+
+    /* Contact */
+    #contact {
+        flex-direction: column;
+    }
+}
+
+/* Devices that don't support hover */
+@media (hover: none) {
+    #work div::before {
+        opacity: 0.65;
+    }
+}
