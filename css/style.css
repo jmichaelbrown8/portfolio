@@ -113,19 +113,13 @@ p {
     justify-content: space-between;
 }
 
-#work::backdrop {
-    width:100%;
-    height:100%;
-    background-color: red;
-}
-
-#work div.hero {
+#work > div.hero {
     flex: 0 0 100%;
     height: 35em;
     margin: 0;
 }
 
-#work div {
+#work > div {
     flex: 0 0 49%;
     height: 17em;
     position: relative;
@@ -134,34 +128,44 @@ p {
     overflow: hidden;
 }
 
-#work [data-tech]::after{
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
+#work > div > * {
+    position: relative;
+    z-index: 1;
 }
 
-#work div:hover [data-tech]::after{
-    content: attr(data-tech);
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: var(--color);
-    font-style: italic;
-    padding: 0 .2em;
-    opacity: 1;
+#work > div > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
-#work div a,
-#work div span {
-    position: absolute;
-    right: 0;
-    bottom: 1em;
-    /* Color and Background are swapped on work tiles */
-    background-color: var(--color);
-    color: var(--background);
-    padding: .4em;
-    border-radius: var(--banner-radius);
-    text-align: right;
-    max-width: 80%;
+#work > div > div > h2 {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 2rem 1rem 0;
+    margin: 0 2rem;
+    background-color: var(--background);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 5px 5px var(--color);
+}
+
+#work > div > div > p {
+    padding: 1rem;
+    margin: 0 2rem;
+    background-color: var(--background);
+    box-shadow: 5px 5px var(--color);
+}
+
+#work > div > div > div {
+    padding: 2rem;
+    margin: 0 2rem 2rem;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 5px 5px var(--color);
 }
 
 /* Contact */
@@ -178,11 +182,11 @@ p {
 
 /* Images */
 
-#work div {
+#work > div {
     position: relative;
 }
 
-#work div::before {
+#work > div::before {
     position: absolute;
     content: " ";
     left: 0;
@@ -194,7 +198,7 @@ p {
     transition: opacity .3s ease-in-out;
 }
 
-#work div:hover::before {
+#work > div:hover::before {
     opacity: 0.65;
 }
 
@@ -275,12 +279,22 @@ p {
         padding: 2em 1em 1em 1em;
     }
 
-    #work div.hero {
+    #work > div,
+    #work > div.hero {
         flex: 0 0 20em;
     }
 
-    #work div{
-        flex: 0 0 10em;
+    #work > div > div {
+        justify-content: center;
+    }
+
+    #work > div > div > h2,
+    #work > div > div > p,
+    #work > div > div > div {
+        padding: 0.5rem;
+        margin: 0 0.1rem;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     /* Contact */
@@ -291,7 +305,7 @@ p {
 
 /* Devices that don't support hover */
 @media (hover: none) {
-    #work div::before {
+    #work > div::before {
         opacity: 0.65;
     }
 }
