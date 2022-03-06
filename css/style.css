@@ -1,319 +1,315 @@
 /* Base Page Styles */
 :root {
-    /* Light Mode */
-    /*     
+  /* Light Mode */
+  /*     
     --background: #EFEFEF;
     --color: #333333;
     --highlight: #B82601;
      */
 
-    /* Dark Mode */
-    --background: #222222;
-    --color: #ffffff;
-    --highlight: lightblue;
+  /* Dark Mode */
+  --background: #222222;
+  --color: #ffffff;
+  --highlight: lightblue;
 
-    --banner-radius: 30em 0 0 30em;
+  --banner-radius: 30em 0 0 30em;
 }
 
 html,
 body {
-    font-family: monospace;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background);
-    color: var(--color);
-    font-size: 120%;
+  font-family: monospace;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  color: var(--color);
+  font-size: 120%;
 }
 
 a {
-    color:var(--highlight);
+  color: var(--highlight);
 }
 
 /* Header Styles */
 header {
-    width: 100%;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav a {
-    margin: 0 1em;
+  margin: 0 1em;
 }
 
 /* Hero Image */
 #banner {
-    background: dimgray;
-    background-image: url(../media/mthood-banner.jpg);
-    background-position: center bottom;
-    background-size: cover;
-    height: 10em;
-    position: relative;
+  background: dimgray;
+  background-image: url(../media/mthood-banner.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  height: 10em;
+  position: relative;
 }
 
 #banner div {
-    /* background: var(--color)ff; */
-    backdrop-filter: blur(1em);
-    /* text-shadow: 1px 0 var(--color); */
-    color: var(--background);
-    position: absolute;
-    right: 0;
-    top: 1em;
-    font-style: italic;
-    padding: .4em;
-    border-radius: var(--banner-radius);
-    max-width: 80%;
-    text-align: right;
+  /* background: var(--color)ff; */
+  backdrop-filter: blur(1em);
+  /* text-shadow: 1px 0 var(--color); */
+  color: var(--background);
+  position: absolute;
+  right: 0;
+  top: 1em;
+  font-style: italic;
+  padding: 0.4em;
+  border-radius: var(--banner-radius);
+  max-width: 80%;
+  text-align: right;
 }
 
 /* Main Styles */
 main section {
-    margin-left: 8em;
-    margin-right: 1.5em;
-    margin-top: 4em;
-    padding-left: 1em;
-    position: relative;
-    border-left: .4em solid var(--highlight);
+  margin-left: 8em;
+  margin-right: 1.5em;
+  margin-top: 4em;
+  padding-left: 1em;
+  position: relative;
+  border-left: 0.4em solid var(--highlight);
 }
 
 main section:last-child {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 label {
-    display: block;
-    position: absolute;
-    left: -6em;
-    width: 4em;
-    text-align: right;
-    font-weight: bold;
-    font-size: 120%;
+  display: block;
+  position: absolute;
+  left: -6em;
+  width: 4em;
+  text-align: right;
+  font-weight: bold;
+  font-size: 120%;
 }
 
 /* About */
 #about {
-    max-width: 70em;
+  max-width: 70em;
 }
 
 p {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /* Work */
 #work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #work > div.hero {
-    flex: 0 0 100%;
-    height: 35em;
-    margin: 0;
+  flex: 0 0 100%;
+  height: 35em;
+  margin: 0;
 }
 
 #work > div {
-    flex: 0 0 49%;
-    height: 17em;
-    position: relative;
-    border: .2em solid var(--color);
-    margin: 1em 0 0 0;
-    overflow: hidden;
+  flex: 0 0 49%;
+  height: 17em;
+  position: relative;
+  border: 0.2em solid var(--color);
+  margin: 1em 0 0 0;
+  overflow: hidden;
 }
 
 #work > div > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 #work > div > div {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 #work > div > div > h2 {
-    font-size: 120%;
-    font-weight: bold;
-    padding: 2rem 1rem 0;
-    margin: 0 2rem;
-    background-color: var(--background);
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: 5px 5px var(--color);
+  font-size: 120%;
+  font-weight: bold;
+  padding: 2rem 1rem 0;
+  margin: 0 2rem;
+  background-color: var(--background);
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 5px 5px var(--color);
 }
 
 #work > div > div > p {
-    padding: 1rem;
-    margin: 0 2rem;
-    background-color: var(--background);
-    box-shadow: 5px 5px var(--color);
+  padding: 1rem;
+  margin: 0 2rem;
+  background-color: var(--background);
+  box-shadow: 5px 5px var(--color);
 }
 
 #work > div > div > div {
-    padding: 2rem;
-    margin: 0 2rem 2rem;
-    background-color: var(--background);
-    display: flex;
-    justify-content: space-around;
-    border-radius: 0 0 1rem 1rem;
-    box-shadow: 5px 5px var(--color);
+  padding: 2rem;
+  margin: 0 2rem 2rem;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 5px 5px var(--color);
 }
 
 /* Contact */
 #contact {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #contact a {
-    margin: 0 1em 1em 0;
+  margin: 0 1em 1em 0;
 }
-
-
 
 /* Images */
 
 #work > div {
-    position: relative;
+  position: relative;
 }
 
 #work > div::before {
-    position: absolute;
-    content: " ";
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.35;
-    background-size: cover;
-    transition: opacity .3s ease-in-out;
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.35;
+  background-size: cover;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #work > div:hover::before {
-    opacity: 0.65;
+  opacity: 0.65;
 }
 
 #work-agility-help::before {
-    background-image: url(../media/agility-help.png)
+  background-image: url(../media/agility-help.png);
 }
 
 #work-tutor-tea::before {
-    background-image: url(../media/tutor-tea.png)
+  background-image: url(../media/tutor-tea.png);
 }
 
 #work-grill::before {
-    background-image: url(../media/grill-mobile.png)
+  background-image: url(../media/grill-mobile.png);
 }
 
 #work-wedding::before {
-    background-image: url(../media/wedding.jpg)
+  background-image: url(../media/wedding.jpg);
 }
 
 #work-interest::before {
-    background-image: url(../media/compoundinterest.jpg)
+  background-image: url(../media/compoundinterest.jpg);
 }
 
 #work-scrumgame::before {
-    background-image: url(../media/scrumgame.jpg)
+  background-image: url(../media/scrumgame.jpg);
 }
 
-
 @media (orientation: landscape) {
-    #work-grill::before {
-        background-image: url(../media/grill-desktop.png)
-    }
+  #work-grill::before {
+    background-image: url(../media/grill-desktop.png);
+  }
 }
 
 @media (orientation: portrait) {
-
 }
 
 /* Mobile Switch */
 @media screen and (max-width: 50em) {
-    * {
-        font-size: 5vw;
-        line-height: 100%;
-    }
-    /* Header */
-    header {
-        display: block;
-    }
+  * {
+    font-size: 5vw;
+    line-height: 100%;
+  }
+  /* Header */
+  header {
+    display: block;
+  }
 
-    header h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 9vw;
-    }
+  header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 9vw;
+  }
 
-    header nav {
-        justify-content: space-around;
-    }
+  header nav {
+    justify-content: space-around;
+  }
 
-    nav a {
-        line-height: 200%;
-        margin: 0 0.5em;
-        font-size: 5vw;
-    }
+  nav a {
+    line-height: 200%;
+    margin: 0 0.5em;
+    font-size: 5vw;
+  }
 
-    /* Main */
-    label {
-        position: relative;
-        top: -1em;
-        left: 0;
-        text-align: left;
-        border-bottom: .2em solid var(--highlight);
-        padding-bottom: .4em;
-        max-width: fit-content;
-    }
+  /* Main */
+  label {
+    position: relative;
+    top: -1em;
+    left: 0;
+    text-align: left;
+    border-bottom: 0.2em solid var(--highlight);
+    padding-bottom: 0.4em;
+    max-width: fit-content;
+  }
 
-    main section {
-        width: 100%;
-        margin: 0;
-        padding: 2em 1em 0 1em;
-        border: 0;
-    }
+  main section {
+    width: 100%;
+    margin: 0;
+    padding: 2em 1em 0 1em;
+    border: 0;
+  }
 
-    #work {
-        flex-direction: column;
-        padding: 2em 1em 1em 1em;
-    }
+  #work {
+    flex-direction: column;
+    padding: 2em 1em 1em 1em;
+  }
 
-    #work > div,
-    #work > div.hero {
-        flex: 0 0 20em;
-    }
+  #work > div,
+  #work > div.hero {
+    flex: 0 0 20em;
+  }
 
-    #work > div > div {
-        justify-content: center;
-    }
+  #work > div > div {
+    justify-content: center;
+  }
 
-    #work > div > div > h2,
-    #work > div > div > p,
-    #work > div > div > div {
-        padding: 0.5rem;
-        margin: 0 0.1rem;
-        box-shadow: none;
-        border-radius: 0;
-    }
+  #work > div > div > h2,
+  #work > div > div > p,
+  #work > div > div > div {
+    padding: 0.5rem;
+    margin: 0 0.1rem;
+    box-shadow: none;
+    border-radius: 0;
+  }
 
-    /* Contact */
-    #contact {
-        flex-direction: column;
-    }
+  /* Contact */
+  #contact {
+    flex-direction: column;
+  }
 }
 
 /* Devices that don't support hover */
 @media (hover: none) {
-    #work > div::before {
-        opacity: 0.65;
-    }
+  #work > div::before {
+    opacity: 0.65;
+  }
 }
