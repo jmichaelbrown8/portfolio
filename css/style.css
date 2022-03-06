@@ -202,6 +202,14 @@ p {
     opacity: 0.65;
 }
 
+#work-agility-help::before {
+    background-image: url(../media/agility-help.png)
+}
+
+#work-tutor-tea::before {
+    background-image: url(../media/tutor-tea.png)
+}
+
 #work-grill::before {
     background-image: url(../media/grill-mobile.png)
 }
