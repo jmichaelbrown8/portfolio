@@ -1,29 +1,37 @@
 /* Base Page Styles */
 :root {
-  /* Light Mode */
-  /*     
-    --background: #EFEFEF;
-    --color: #333333;
-    --highlight: #B82601;
-     */
-
-  /* Dark Mode */
-  --background: #222222;
-  --color: #ffffff;
-  --highlight: lightblue;
+  --background: white;
+  --color: #353744;
+  --highlight: #00ab44;
 
   --banner-radius: 30em 0 0 30em;
 }
 
+@font-face {
+  font-family: Metropolis;
+  src: url("/css/fonts/Metropolis/Metropolis-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: Lato;
+  src: url("/css/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+/* Main HTML */
+
 html,
 body {
-  font-family: monospace;
+  font-family: Lato, sans-serif;
   margin: 0 auto;
   width: 100%;
   height: 100%;
   background-color: var(--background);
   color: var(--color);
   font-size: 120%;
+}
+
+h1 {
+  font-family: Metropolis, sans-serif;
+  color: var(--highlight);
 }
 
 a {
@@ -50,27 +58,27 @@ nav a {
 
 /* Hero Image */
 #banner {
-  background: dimgray;
-  background-image: url(../media/mthood-banner.jpg);
+  position: relative;
+  background-color: var(--highlight);
+  height: 30vw;
+}
+#banner-image {
+  background-image: url(../media/mthood.jpg);
   background-position: center bottom;
   background-size: cover;
-  height: 10em;
-  position: relative;
+  opacity: 0.55;
+  height: 100%;
 }
-
-#banner div {
-  /* background: var(--color)ff; */
-  backdrop-filter: blur(1em);
-  /* text-shadow: 1px 0 var(--color); */
-  color: var(--background);
+#banner-text {
   position: absolute;
+  top: 0;
   right: 0;
-  top: 1em;
+  color: var(--background);
   font-style: italic;
-  padding: 0.4em;
-  border-radius: var(--banner-radius);
-  max-width: 80%;
-  text-align: right;
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+  padding: 1em;
 }
 
 /* Main Styles */
@@ -95,6 +103,8 @@ label {
   text-align: right;
   font-weight: bold;
   font-size: 120%;
+  text-transform: uppercase;
+  color: var(--highlight);
 }
 
 /* About */
@@ -113,59 +123,50 @@ p {
   justify-content: space-between;
 }
 
-#work > div.hero {
+.work-item.hero {
   flex: 0 0 100%;
   height: 35em;
   margin: 0;
 }
 
-#work > div {
+.work-item {
   flex: 0 0 49%;
   height: 17em;
   position: relative;
   border: 0.2em solid var(--color);
   margin: 1em 0 0 0;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#work > div > * {
-  position: relative;
-  z-index: 1;
-}
-
-#work > div > div {
+.work-label {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100%;
+  background-color: var(--background);
 }
 
-#work > div > div > h2 {
+.work-label > h2 {
+  color: var(--highlight);
   font-size: 120%;
   font-weight: bold;
   padding: 2rem 1rem 0;
   margin: 0 2rem;
-  background-color: var(--background);
   border-radius: 1rem 1rem 0 0;
-  box-shadow: 5px 5px var(--color);
 }
 
-#work > div > div > p {
+.work-label > p {
   padding: 1rem;
   margin: 0 2rem;
-  background-color: var(--background);
-  box-shadow: 5px 5px var(--color);
 }
 
-#work > div > div > div {
-  padding: 2rem;
+.work-label > div {
   margin: 0 2rem 2rem;
-  background-color: var(--background);
   display: flex;
   justify-content: space-around;
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 5px 5px var(--color);
 }
 
 /* Contact */
@@ -176,61 +177,6 @@ p {
 
 #contact a {
   margin: 0 1em 1em 0;
-}
-
-/* Images */
-
-#work > div {
-  position: relative;
-}
-
-#work > div::before {
-  position: absolute;
-  content: " ";
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.35;
-  background-size: cover;
-  transition: opacity 0.3s ease-in-out;
-}
-
-#work > div:hover::before {
-  opacity: 0.65;
-}
-
-#work-agility-help::before {
-  background-image: url(../media/agility-help.png);
-}
-
-#work-tutor-tea::before {
-  background-image: url(../media/tutor-tea.png);
-}
-
-#work-grill::before {
-  background-image: url(../media/grill-mobile.png);
-}
-
-#work-wedding::before {
-  background-image: url(../media/wedding.jpg);
-}
-
-#work-interest::before {
-  background-image: url(../media/compoundinterest.jpg);
-}
-
-#work-scrumgame::before {
-  background-image: url(../media/scrumgame.jpg);
-}
-
-@media (orientation: landscape) {
-  #work-grill::before {
-    background-image: url(../media/grill-desktop.png);
-  }
-}
-
-@media (orientation: portrait) {
 }
 
 /* Mobile Switch */
@@ -261,6 +207,15 @@ p {
   }
 
   /* Main */
+  #banner {
+    height: 50vw;
+  }
+
+  #banner-text {
+    left: 0;
+    padding: 1em 0;
+  }
+
   label {
     position: relative;
     top: -1em;
@@ -268,7 +223,7 @@ p {
     text-align: left;
     border-bottom: 0.2em solid var(--highlight);
     padding-bottom: 0.4em;
-    max-width: fit-content;
+    width: 100%;
   }
 
   main section {
@@ -280,25 +235,8 @@ p {
 
   #work {
     flex-direction: column;
+    align-items: center;
     padding: 2em 1em 1em 1em;
-  }
-
-  #work > div,
-  #work > div.hero {
-    flex: 0 0 20em;
-  }
-
-  #work > div > div {
-    justify-content: center;
-  }
-
-  #work > div > div > h2,
-  #work > div > div > p,
-  #work > div > div > div {
-    padding: 0.5rem;
-    margin: 0 0.1rem;
-    box-shadow: none;
-    border-radius: 0;
   }
 
   /* Contact */
@@ -309,7 +247,4 @@ p {
 
 /* Devices that don't support hover */
 @media (hover: none) {
-  #work > div::before {
-    opacity: 0.65;
-  }
 }

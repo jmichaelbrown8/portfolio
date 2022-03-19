@@ -2,68 +2,72 @@ const workContainer = document.querySelector("#work");
 
 const projects = [
   {
-    name: "Agility Help",
-    subtitle: "A blog site for helpful agile software development tips.",
-    id: "work-agility-help",
+    title: "Elevator Pitch",
+    subtitle: "A space to pitch ideas and look for collaborators.",
+    id: "work-elevator-pitch",
+    imgUrl: "./media/elevatorpitch.space.png",
     class: "hero",
-    liveURL: "https://agility-help.herokuapp.com",
-    codeURL: "https://github.com/jmichaelbrown8/agility-help",
+    siteUrl: "https://elevatorpitch.space",
+    codeUrl: "https://github.com/jmichaelbrown8/elevator-pitch",
   },
   {
-    name: "Tutor Tea",
-    subtitle:
-      "Rate and review your tutor to help others in bootcamp to get paired up.",
-    id: "work-tutor-tea",
-    liveURL: "https://tutor-tea.herokuapp.com",
-    codeURL: "https://github.com/jmichaelbrown8/tutortea",
-  },
-  {
-    name: "Grill: Food and Friends",
+    title: "Grill: Food and Friends",
     subtitle:
       "Search for recipes to grill while grilling your friends with trivia!",
     id: "work-grill",
-    liveURL: "https://grill-n.herokuapp.com/",
-    codeURL: "https://github.com/jmichaelbrown8/grill",
+    imgUrl: "./media/grill.png",
+    siteUrl: "https://grill-n.herokuapp.com/",
+    codeUrl: "https://github.com/jmichaelbrown8/grill",
   },
   {
-    name: "Wedding Site",
-    subtitle: "A live information site I created for my wedding.",
-    id: "work-wedding",
-    liveURL: "https://jmichaelbrown8.github.io/weddingsite/",
-    codeURL: "https://github.com/jmichaelbrown8/weddingsite",
+    title: "Tutor Tea",
+    subtitle:
+      "Rate and review your tutor to help others in bootcamp to get paired up.",
+    imgUrl: "./media/tutortea.png",
+    id: "work-tutor-tea",
+    siteUrl: "https://tutortea.com",
+    codeUrl: "https://github.com/jmichaelbrown8/tutortea",
   },
   {
-    name: "Interest Calc",
-    subtitle: "A simple javascript calculator for compounding interest.",
-    id: "work-interest",
-    liveURL: "https://jmichaelbrown8.github.io/compoundinterest/",
-    codeURL: "https://github.com/jmichaelbrown8/compoundinterest",
+    title: "Agility Help",
+    subtitle: "A blog site for helpful agile software development tips.",
+    id: "work-agility-help",
+    imgUrl: "./media/agility-help.png",
+    siteUrl: "https://agility-help.herokuapp.com",
+    codeUrl: "https://github.com/jmichaelbrown8/agility-help",
   },
   {
-    name: "Scrum Game",
+    title: "Scrum Game",
     subtitle: "Test your Scrum framework knowledge.",
+    imgUrl: "./media/scrumgame.jpg",
     id: "work-scrumgame",
-    liveURL: "https://agility.help/scrumgame/",
-    codeURL: "https://github.com/jmichaelbrown8/scrum-game",
+    siteUrl: "https://agility.help/scrumgame/",
+    codeUrl: "https://github.com/jmichaelbrown8/scrum-game",
   },
 ];
 
-function renderWork(workObj) {
+const makePolaroid = (obj) => {
+  const { imgUrl, title, subtitle, siteUrl, codeUrl } = obj;
   return `
-    <div id="${workObj.id}" class="${workObj.class}">
-        <div>
-            <h2>${workObj.name}</h2>
-            <p>${workObj.subtitle}</p>
-            <div>
-                <a href="${workObj.liveURL}">Site</a>
-                <a href="${workObj.codeURL}">Code</a>
-            </div>
+    <div class="target">
+      <div class="frame">
+        <div class="image" style="background-image: url(${imgUrl}); background-position: center; background-size: cover;"></div>
+        <div class="label">
+          <h3>${title}</h3>
+          <p>
+            ${subtitle}
+          </p>
+          <div class="links">
+            <a href="${siteUrl}" target="_blank">site</a>
+            <a href="${codeUrl}" target="_blank">code</a>
+          </div>
         </div>
-        
-    </div>`;
-}
+      </div>
+    </div>
+    `;
+};
 
 for (let i = 0; i < projects.length; i++) {
-  let workHTML = renderWork(projects[i]);
+  let workHTML = makePolaroid(projects[i]);
   workContainer.innerHTML += workHTML;
 }
