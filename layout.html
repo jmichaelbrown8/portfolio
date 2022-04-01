@@ -16,6 +16,12 @@
     />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/60540321c0.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/polaroid.css" />
     <style>
       /* overall layout */
@@ -127,6 +133,8 @@
         display: grid;
         justify-items: center;
         align-items: center;
+        color: rgba(255, 255, 255, 0.9);
+        padding: 1em;
       }
     </style>
   </head>
@@ -145,12 +153,12 @@
     </header>
     <main>
       <!-- About Me -->
-      <section id="about" class="hidden">
+      <section id="about" class="">
         <div class="frame z-depth-5">
           <div
             class="image"
             style="
-              background-image: url(./media/headshot.png);
+              background-image: url(./media/headshot.jpg);
               background-position: center;
               background-size: cover;
             "
@@ -367,7 +375,7 @@
       </section>
 
       <!-- Resume -->
-      <section id="resume" class="container">
+      <section id="resume" class="container hidden">
         <h3>Skills</h3>
         <ul>
           <li>JavaScript, Python, HTML, CSS, SQL, MongoDB</li>
@@ -392,11 +400,11 @@
       </section>
     </main>
     <footer>
-      <a class="red">GitHub</a>
-      <a class="orange">LinkedIn</a>
+      <a class="red"><i class="fa-brands fa-github fa-2x"></i></a>
+      <a class="orange"><i class="fa-brands fa-linkedin fa-2x"></i></a>
       <a class="yellow darken-1"></a>
-      <a class="green">Twitter</a>
-      <a class="blue">Instagram</a>
+      <a class="green"><i class="fa-brands fa-twitter fa-2x"></i></a>
+      <a class="blue"><i class="fa-brands fa-instagram fa-2x"></i></a>
     </footer>
   </body>
 </html>
