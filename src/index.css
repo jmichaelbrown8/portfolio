@@ -14,21 +14,7 @@ body {
   grid-template-rows: 2fr 7fr 1fr;
 }
 
-/* header layout */
-header {
-  display: grid;
-  /* grid-template-rows: auto 1fr auto; */
-  justify-items: stretch;
-  align-items: stretch;
-  text-align: center;
-}
-nav {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* header layout */
+/* main layout */
 main {
   display: grid;
 }
@@ -93,20 +79,4 @@ textarea:focus,
 
 .hidden {
   display: none !important;
-}
-
-/* footer layout */
-footer {
-  display: grid;
-  justify-items: stretch;
-  align-items: stretch;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
-}
-footer > a {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.9);
-  padding: 1em;
 }
