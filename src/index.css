@@ -1,0 +1,112 @@
+/* overall layout */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 2fr 7fr 1fr;
+}
+
+/* header layout */
+header {
+  display: grid;
+  /* grid-template-rows: auto 1fr auto; */
+  justify-items: stretch;
+  align-items: stretch;
+  text-align: center;
+}
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* header layout */
+main {
+  display: grid;
+}
+#about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25em);
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  gap: 2rem;
+}
+#about > img {
+  border-radius: 25rem;
+  width: 25rem;
+  height: 25rem;
+  margin: auto;
+}
+
+#work {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 21em);
+  gap: 2em;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+.frame {
+  height: 25em;
+  width: 21em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+#contact {
+  padding: 5em 0;
+}
+
+/* input color */
+input,
+textarea {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* label focus color */
+input:focus + label,
+textarea:focus + label {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+/* label underline focus color */
+input:focus,
+textarea:focus,
+.validate.valid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+
+#resume {
+  display: grid;
+  grid-template-rows: 1fr 1fr 7fr 1fr;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* footer layout */
+footer {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+}
+footer > a {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1em;
+}
