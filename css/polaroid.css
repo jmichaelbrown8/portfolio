@@ -5,20 +5,14 @@
 }
 
 .frame {
-  pointer-events: none;
-  border: 0.15em outset dimgray;
-  width: 82vh;
-  height: 100vh;
-  box-shadow: none;
-  transform: rotate(0deg);
   border-radius: 0.4em;
   background-color: whitesmoke;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  margin-bottom: 0.8em;
+  padding-top: 5.5%;
 }
-.target {
+/* .target {
   z-index: 1;
   transition: z-index 0.3s step-end;
+  width: fit-content;
 }
 .target:hover {
   z-index: 2;
@@ -28,33 +22,42 @@
   box-shadow: 1em 1em 1em dimgray;
   transform: rotate(-4deg) translateX(-2em);
 }
+.target:hover .image:before {
+  opacity: 0;
+} */
 .image {
-  border: 0.1em inset dimgray;
+  border: 0.1em inset black;
   width: 90%;
   height: 74%;
   margin: auto;
-  margin-top: 5.5%;
   background-size: cover;
+  position: relative;
 }
+
 .label {
-  font-family: "Permanent Marker", cursive;
+  /* font-family: monospace; */
   width: 90%;
+  height: 20%;
   margin: auto;
   font-size: 1em;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   justify-items: center;
   text-align: center;
+  position: relative;
 }
 .label h3 {
-  font-size: 2rem;
+  font-size: 100%;
   padding: 0.1rem;
   margin: 0.1rem;
+  height: 25%;
 }
 .label p {
-  font-size: 1.2rem;
+  font-size: 0.7em;
   padding: 0.1rem;
   margin: 0.1rem;
+  height: 50%;
 }
 .label .links {
   display: grid;
@@ -62,24 +65,24 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   justify-items: center;
-  font-size: 1.2rem;
+  font-size: 1em;
   pointer-events: auto;
+  height: 25%;
+  position: relative;
+}
+.label .links a {
+  height: 100%;
 }
 
-@media screen and (orientation: portrait) {
-  .frame {
-    width: 82vw;
-    height: 100vw;
-  }
-
-  /* Polaroid */
+/* @media screen and (orientation: portrait) {
+  /* Polaroid 
   .target:hover > .frame {
     transform: rotate(-4deg);
   }
-
-  .label h3,
-  .label p,
-  .label .links {
-    font-size: 0.7em;
-  }
 }
+
+@media screen and (orientation: landscape) {
+  #contact {
+    flex-wrap: wrap;
+  }
+} */

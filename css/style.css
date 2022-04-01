@@ -123,52 +123,6 @@ p {
   justify-content: space-between;
 }
 
-.work-item.hero {
-  flex: 0 0 100%;
-  height: 35em;
-  margin: 0;
-}
-
-.work-item {
-  flex: 0 0 49%;
-  height: 17em;
-  position: relative;
-  border: 0.2em solid var(--color);
-  margin: 1em 0 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.work-label {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: var(--background);
-}
-
-.work-label > h2 {
-  color: var(--highlight);
-  font-size: 120%;
-  font-weight: bold;
-  padding: 2rem 1rem 0;
-  margin: 0 2rem;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.work-label > p {
-  padding: 1rem;
-  margin: 0 2rem;
-}
-
-.work-label > div {
-  margin: 0 2rem 2rem;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 0 0 1rem 1rem;
-}
-
 /* Contact */
 #contact {
   display: flex;
