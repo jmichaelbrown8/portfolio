@@ -55,7 +55,7 @@ function Work() {
   return (
     <section style={styles}>
       {work.map((workItem) => (
-        <Polaroid {...workItem} />
+        <Polaroid key={workItem.title} {...workItem} />
       ))}
     </section>
   );
