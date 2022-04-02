@@ -7,13 +7,13 @@ const styles = {
   textAlign: "center",
 };
 
-function Header() {
+function Header({ handlePageChange }) {
   return (
     <header style={styles}>
       <h1>J. Michael Brown</h1>
       <h5>Full Stack Software Engineer</h5>
 
-      <Nav />
+      <Nav handlePageChange={handlePageChange} />
     </header>
   );
 }
