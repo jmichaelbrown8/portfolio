@@ -23,7 +23,7 @@ function Nav({ currentPage, handlePageChange }) {
       />
       <NavLink
         className="yellow darken-1"
-        text="photos"
+        text=""
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />

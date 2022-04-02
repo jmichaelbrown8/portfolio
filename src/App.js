@@ -33,7 +33,7 @@ function App() {
       case "resume":
         return <Resume />;
       default:
-        return <About />;
+        return;
     }
   };
 

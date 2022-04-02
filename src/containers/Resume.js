@@ -18,18 +18,16 @@ function Resume() {
       </ul>
       <iframe
         title="Resume"
-        src="./media/resume.pdf"
+        src="./media/J. Michael Brown - Resume.pdf"
         alt="Resume"
         width="100%"
         height="100%"
       ></iframe>
-      <a
-        href="https://drive.google.com/file/d/1DPpo_neAnPRrVUYb2osZ4A0_8uAqntgm/view?usp=sharing"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Resume
-      </a>
+      <p>
+        <a href="./media/J. Michael Brown - Resume.pdf" download>
+          Download Resume
+        </a>
+      </p>
     </section>
   );
 }
