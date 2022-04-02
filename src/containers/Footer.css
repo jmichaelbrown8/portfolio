@@ -6,9 +6,7 @@ footer {
   justify-content: space-evenly;
 }
 footer > a {
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  text-align: center;
   color: rgba(255, 255, 255, 0.9);
   padding: 1em;
 }

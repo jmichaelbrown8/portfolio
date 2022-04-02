@@ -1,9 +1,15 @@
 import Nav from "./Nav";
-import "./Header.css";
+
+const styles = {
+  display: "grid",
+  justifyItems: "stretch",
+  alignItems: "stretch",
+  textAlign: "center",
+};
 
 function Header() {
   return (
-    <header>
+    <header style={styles}>
       <h1>J. Michael Brown</h1>
       <h5>Full Stack Software Engineer</h5>
 

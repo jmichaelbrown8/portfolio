@@ -1,9 +1,14 @@
 import NavLink from "../components/NavLink";
-import "./Nav.css";
+
+const styles = {
+  display: "grid",
+  gridAutoFlow: "column",
+  gridTemplateColumns: "repeat(5, 1fr)",
+};
 
 function Nav() {
   return (
-    <nav className="grey darken-4 z-depth-0">
+    <nav className="grey darken-4 z-depth-0" style={styles}>
       <NavLink className="red" text="about" />
       <NavLink className="orange" text="work" />
       <NavLink className="yellow darken-1" text="photos" />
