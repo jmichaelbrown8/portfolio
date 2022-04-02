@@ -40,8 +40,8 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div className="grey darken-3 text-light" style={styles.body}>
-      <Header handlePageChange={handlePageChange} />
+    <div className="grey darken-4 text-light" style={styles.body}>
+      <Header handlePageChange={handlePageChange} currentPage={currentPage} />
       <main style={styles.main}>{renderPage()}</main>
       <Footer />
     </div>

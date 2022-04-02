@@ -1,7 +1,7 @@
-function NavLink({ className, text, handlePageChange }) {
+function NavLink({ className, text, currentPage, handlePageChange }) {
   return (
     <a
-      className={className}
+      className={text === currentPage ? className : ""}
       href={`#${text}`}
       onClick={() => handlePageChange(text)}
     >

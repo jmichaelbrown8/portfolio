@@ -13,6 +13,16 @@ body,
   width: 100%;
 }
 
+::selection {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+p > a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
 .hidden {
   display: none !important;
 }
