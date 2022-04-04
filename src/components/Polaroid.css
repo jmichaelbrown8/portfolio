@@ -42,9 +42,6 @@
   pointer-events: auto;
   position: relative;
 }
-.info .links a {
-  text-decoration: underline;
-}
 
 .active .info {
   opacity: 0.9;
@@ -81,10 +78,5 @@
   }
   .frame.active {
     transform: none;
-  }
-
-  .clear .info {
-    opacity: 0;
-    backdrop-filter: none;
   }
 }

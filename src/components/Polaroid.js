@@ -8,10 +8,20 @@ function Info({ description, tech, siteUrl, codeUrl }) {
       {tech && <div style={{ alignSelf: "start" }}>{tech}</div>}
       {siteUrl && codeUrl && (
         <div className="links">
-          <a href={siteUrl} target="_blank" rel="noreferrer">
+          <a
+            href={siteUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn blue"
+          >
             site
           </a>
-          <a href={codeUrl} target="_blank" rel="noreferrer">
+          <a
+            href={codeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn blue"
+          >
             code
           </a>
         </div>
@@ -34,7 +44,6 @@ function Polaroid({
   };
 
   const [active, setActive] = useState(false);
-  const [mobileClear, setMobileClear] = useState(false);
 
   const makeActive = () => {
     setActive(true);
@@ -46,20 +55,9 @@ function Polaroid({
 
   return (
     <div
-      className={
-        "frame z-depth-5 " +
-        (active ? "active" : "") +
-        " " +
-        (mobileClear ? "clear" : "")
-      }
+      className={"frame z-depth-5 " + (active ? "active" : "")}
       onMouseEnter={makeActive}
       onMouseLeave={makeInactive}
-      onTouchStart={() => {
-        setMobileClear(true);
-      }}
-      onTouchEnd={() => {
-        setMobileClear(false);
-      }}
     >
       <div className="image" style={myStyles}>
         {description ? (
