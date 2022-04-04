@@ -70,7 +70,7 @@ function Contact() {
         <div className="row">
           <div className="col">
             <button
-              className="btn waves-effect waves-light green"
+              className="btn waves-effect waves-light blue"
               type="submit"
               name="action"
             >

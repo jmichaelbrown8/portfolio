@@ -29,13 +29,13 @@ function Nav({ currentPage, handlePageChange }) {
       />
       <NavLink
         className="green"
-        text="contact"
+        text="resume"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />
       <NavLink
         className="blue"
-        text="resume"
+        text="contact"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />
