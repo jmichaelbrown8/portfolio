@@ -16,13 +16,15 @@ function Resume() {
           Improvement
         </li>
       </ul>
-      <iframe
-        title="Resume"
-        src="./media/J. Michael Brown - Resume.pdf"
-        alt="Resume"
-        width="100%"
-        height="100%"
-      ></iframe>
+      <div>
+        <iframe
+          title="Resume"
+          src="./media/J. Michael Brown - Resume.pdf"
+          alt="Resume"
+          width="100%"
+          height="100%"
+        ></iframe>
+      </div>
       <p>
         <a href="./media/J. Michael Brown - Resume.pdf" download>
           Download Resume
