@@ -1,3 +1,38 @@
+# 👨‍💻 portfolio
+
+By J. Michael Brown https://jmichaelbrown.codes
+
+A React single page app to display a selection of coding projects, some information about me, and my contact information. Styling inspired by Polaroid.
+
+## Technologies Used
+
+- React
+- Materialize CSS Library
+
+## Setup
+
+- Clone the repo
+- `npm i`
+- `npm start`
+
+## Tests
+
+- `npm run test`
+
+## Deployment
+
+- `npm run deploy`
+
+This portfolio is deployed using GitHub pages with a CNAME to: [https://jmichaelbrown.codes](https://jmichaelbrown.codes)
+
+<img src="./public/media/portfolio.png" alt="Screenshot" />
+
+## License
+
+[MIT](./LICENSE)
+
+Copyright (c) 2021 J. Michael Brown
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
