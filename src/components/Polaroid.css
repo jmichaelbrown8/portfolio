@@ -65,6 +65,11 @@
   height: 25%;
 }
 
+.btn {
+  text-transform: lowercase !important;
+}
+
+/* Devices without hover capability */
 @media screen and (hover: none) {
   .frame {
     user-select: none;
@@ -78,5 +83,29 @@
   }
   .frame.active {
     transform: none;
+  }
+  .btn {
+    font-size: 16px !important;
+  }
+}
+
+/* Devices smaller than 480px wide */
+@media screen and (max-width: 480px) {
+  .frame {
+    height: 25.5rem;
+    width: 20rem;
+  }
+  .image {
+    width: 18.5rem;
+    height: 18.5rem;
+  }
+  .gallery {
+    grid-template-columns: max-content !important;
+  }
+  .fa-2x {
+    transform: scale(0.75);
+  }
+  .nav {
+    grid-auto-flow: row;
   }
 }

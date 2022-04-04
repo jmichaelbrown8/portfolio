@@ -1,4 +1,5 @@
 import Polaroid from "../components/Polaroid";
+import "./About.css";
 
 const styles = {
   display: "grid",
@@ -13,7 +14,7 @@ const styles = {
 
 function About() {
   return (
-    <section className="" style={styles}>
+    <section id="about-me" style={styles}>
       <Polaroid
         imageUrl={"/media/headshot.jpg"}
         title={<em>Yep, my name really is just the letter J.!</em>}

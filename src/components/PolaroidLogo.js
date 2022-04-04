@@ -1,3 +1,5 @@
+import "./PolaroidLogo.css";
+
 const styles = {
   height: "0.5rem",
   width: "9rem",
@@ -10,7 +12,7 @@ const styles = {
 
 function PolaroidLogo() {
   return (
-    <div style={styles}>
+    <div style={styles} class="polaroid-logo">
       <div className="red"></div>
       <div className="orange"></div>
       <div className="yellow darken-1"></div>
