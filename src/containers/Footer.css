@@ -1,0 +1,12 @@
+footer {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+}
+footer > a {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1em;
+}
