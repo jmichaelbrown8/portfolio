@@ -34,10 +34,7 @@ function Polaroid({
   };
 
   const [active, setActive] = useState(false);
-
-  const toggleActive = () => {
-    setActive(!active);
-  };
+  const [mobileClear, setMobileClear] = useState(false);
 
   const makeActive = () => {
     setActive(true);
@@ -49,9 +46,20 @@ function Polaroid({
 
   return (
     <div
-      className={"frame z-depth-5 " + (active ? "active" : "")}
+      className={
+        "frame z-depth-5 " +
+        (active ? "active" : "") +
+        " " +
+        (mobileClear ? "clear" : "")
+      }
       onMouseEnter={makeActive}
       onMouseLeave={makeInactive}
+      onTouchStart={() => {
+        setMobileClear(true);
+      }}
+      onTouchEnd={() => {
+        setMobileClear(false);
+      }}
     >
       <div className="image" style={myStyles}>
         {description ? (

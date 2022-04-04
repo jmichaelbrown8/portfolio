@@ -69,11 +69,22 @@
 }
 
 @media screen and (hover: none) {
+  .frame {
+    user-select: none;
+  }
+
   .info,
   .active .info {
-    opacity: 0.75;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(2px);
   }
   .frame.active {
     transform: none;
+  }
+
+  .clear .info {
+    opacity: 0;
+    backdrop-filter: none;
   }
 }
