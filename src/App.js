@@ -6,6 +6,7 @@ import BackEnd from "./containers/BackEnd";
 import Contact from "./containers/Contact";
 import Resume from "./containers/Resume";
 import Footer from "./containers/Footer";
+import Film from "./containers/Film";
 
 const styles = {
   body: {
@@ -26,7 +27,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "about":
-        return <About />;
+        return <About setCurrentPage={setCurrentPage} />;
       case "front end":
         return <FrontEnd />;
       case "back end":
@@ -35,6 +36,8 @@ function App() {
         return <Contact />;
       case "resume":
         return <Resume />;
+      case "film":
+        return <Film />;
       default:
         return;
     }

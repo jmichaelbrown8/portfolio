@@ -12,7 +12,7 @@ const styles = {
   fontSize: "1rem",
 };
 
-function About() {
+function About({ setCurrentPage }) {
   return (
     <section id="about-me" style={styles}>
       <Polaroid
@@ -47,7 +47,12 @@ function About() {
             music
           </a>
           ,{" "}
-          <a href="./film.html" target="_blank">
+          <a
+            href="#film"
+            onClick={() => {
+              setCurrentPage("film");
+            }}
+          >
             animation
           </a>
           ,
