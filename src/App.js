@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Header from "./containers/Header";
 import About from "./containers/About";
-import Work from "./containers/Work";
+import FrontEnd from "./containers/FrontEnd";
+import BackEnd from "./containers/BackEnd";
 import Contact from "./containers/Contact";
 import Resume from "./containers/Resume";
 import Footer from "./containers/Footer";
@@ -26,8 +27,10 @@ function App() {
     switch (currentPage) {
       case "about":
         return <About />;
-      case "work":
-        return <Work />;
+      case "front end":
+        return <FrontEnd />;
+      case "back end":
+        return <BackEnd />;
       case "contact":
         return <Contact />;
       case "resume":

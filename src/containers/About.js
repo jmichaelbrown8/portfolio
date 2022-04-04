@@ -8,6 +8,7 @@ const styles = {
   justifyContent: "space-evenly",
   padding: "2rem",
   gap: "2rem",
+  fontSize: "1rem",
 };
 
 function About() {
@@ -17,7 +18,7 @@ function About() {
         imageUrl={"/media/headshot.jpg"}
         title={<em>Yep, my name really is just the letter J.!</em>}
       />
-      <div className="text">
+      <div>
         <p>
           Agile software delivery expert, with 4 years of front end web
           development experience and 6 years of software team process

@@ -17,13 +17,13 @@ function Nav({ currentPage, handlePageChange }) {
       />
       <NavLink
         className="orange"
-        text="work"
+        text="front end"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />
       <NavLink
-        className="yellow darken-1"
-        text=""
+        className="yellow darken-1 black-text"
+        text="back end"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />
