@@ -1,11 +1,58 @@
+import { useState, useEffect } from "react";
+
 const styles = {
-  display: "grid",
-  gridTemplateRows: "1fr 1fr 7fr 1fr",
+  container: {
+    display: "grid",
+    gridTemplateRows: "auto",
+  },
 };
 
+function debounce(fn, ms) {
+  let timer;
+  return (_) => {
+    clearTimeout(timer);
+    timer = setTimeout((_) => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
+
+function width() {
+  console.log("width", window.innerWidth);
+  const innerWidth = window.innerWidth;
+  if (innerWidth < 600) return window.innerWidth * 0.9;
+
+  if (innerWidth < 900) return window.innerWidth * 0.85;
+
+  return window.innerWidth * 0.7;
+}
+
+function height() {
+  return width() * (23 / 8.5);
+}
+
 function Resume() {
+  const [dimensions, setDimensions] = useState({
+    height: height(),
+    width: width(),
+  });
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: height(),
+        width: width(),
+      });
+    }, 1000);
+
+    window.addEventListener("resize", debouncedHandleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  });
   return (
-    <section className="container" style={styles}>
+    <section className="container" style={styles.container}>
       <h3>Skills</h3>
       <ul>
         <li>JavaScript, Python, HTML, CSS, SQL, MongoDB</li>
@@ -16,14 +63,15 @@ function Resume() {
           Improvement
         </li>
       </ul>
-      <div>
-        <iframe
-          title="Resume"
-          src="./media/J. Michael Brown - Resume.pdf"
-          alt="Resume"
-          width="100%"
-          height="100%"
-        ></iframe>
+      <div id="resume-container">
+        <object
+          data="./media/J. Michael Brown - Resume.pdf"
+          type="application/pdf"
+          width={dimensions.width}
+          height={dimensions.height}
+        >
+          <div>No online PDF viewer installed</div>
+        </object>
       </div>
       <p>
         <a href="./media/J. Michael Brown - Resume.pdf" download>

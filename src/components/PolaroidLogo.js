@@ -12,7 +12,7 @@ const styles = {
 
 function PolaroidLogo() {
   return (
-    <div style={styles} class="polaroid-logo">
+    <div style={styles} className="polaroid-logo">
       <div className="red"></div>
       <div className="orange"></div>
       <div className="yellow darken-1"></div>
