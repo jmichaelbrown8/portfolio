@@ -17,7 +17,7 @@ const work = [
     title: "Scrum Game",
     description:
       "Test your Scrum framework knowledge with a drag and drop puzzle.",
-    tech: "React and react-beautiful-dnd",
+    tech: "React and react-beautiful-dnd.",
     siteUrl: "https://agility.help/scrumgame/",
     codeUrl: "https://github.com/jmichaelbrown8/scrum-game",
   },
@@ -42,7 +42,7 @@ const work = [
   {
     imageUrl: "/media/portfolio.png",
     title: "Portfolio",
-    tech: "React, and Materialize CSS library",
+    tech: "React and Materialize CSS library.",
     description: "This portfolio to showcase some of my projects.",
     siteUrl: "https://jmichaelbrown.codes/",
     codeUrl: "https://github.com/jmichaelbrown8/portfolio",

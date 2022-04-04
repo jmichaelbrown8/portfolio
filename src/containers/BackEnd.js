@@ -15,7 +15,7 @@ const work = [
   {
     imageUrl: "/media/globalstandup.png",
     title: "Global Stand-Up",
-    tech: "NodeJS, Express, Mongoose, and MongoDB",
+    tech: "NodeJS, Express, Mongoose, and MongoDB.",
     description:
       "A social media back end for collaboration. Share what you're working on today.",
     siteUrl: "https://global-stand-up.herokuapp.com",
