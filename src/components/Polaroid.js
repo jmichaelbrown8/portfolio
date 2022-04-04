@@ -50,11 +50,8 @@ function Polaroid({
   return (
     <div
       className={"frame z-depth-5 " + (active ? "active" : "")}
-      onClick={toggleActive}
       onMouseEnter={makeActive}
-      onTouchStart={makeActive}
       onMouseLeave={makeInactive}
-      onTouchEnd={makeInactive}
     >
       <div className="image" style={myStyles}>
         {description ? (

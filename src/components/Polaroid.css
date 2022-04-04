@@ -19,7 +19,7 @@
   position: relative;
   transition: all 0.3s ease;
 }
-.frame:hover {
+.frame.active {
   transform: scale(1.05);
 }
 .info {
@@ -45,11 +45,6 @@
 .info .links a {
   text-decoration: underline;
 }
-/* 
-.active .image {
-  filter: grayscale(100%) brightness(0.2);
-  -webkit-filter: grayscale(100%);
-} */
 
 .active .info {
   opacity: 0.9;
@@ -71,4 +66,14 @@
   padding: 0.1rem;
   margin: 0.1rem;
   height: 25%;
+}
+
+@media screen and (hover: none) {
+  .info,
+  .active .info {
+    opacity: 0.75;
+  }
+  .frame.active {
+    transform: none;
+  }
 }
