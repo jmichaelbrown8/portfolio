@@ -51,7 +51,7 @@ const work = [
 
 function FrontEnd() {
   return (
-    <section style={styles} class="gallery">
+    <section style={styles} className="gallery">
       {work.map((workItem) => (
         <Polaroid key={workItem.title} {...workItem} />
       ))}

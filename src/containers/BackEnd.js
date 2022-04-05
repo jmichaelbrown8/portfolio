@@ -50,7 +50,7 @@ const work = [
 
 function BackEnd() {
   return (
-    <section style={styles} class="gallery">
+    <section style={styles} className="gallery">
       {work.map((workItem) => (
         <Polaroid key={workItem.title} {...workItem} highlight="yellow" />
       ))}
