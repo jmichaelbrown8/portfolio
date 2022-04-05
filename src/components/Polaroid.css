@@ -29,7 +29,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr auto;
   gap: 2em;
-  color: white;
+  background-color: transparent;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -44,7 +44,9 @@
 }
 
 .active .info {
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  backdrop-filter: blur(1px);
 }
 
 .label {

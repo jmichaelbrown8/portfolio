@@ -3,7 +3,7 @@ import "./Polaroid.css";
 
 function Info({ description, tech, siteUrl, codeUrl }) {
   return (
-    <div className="container info black text-white">
+    <div className="container info white-text">
       {description && <div style={{ alignSelf: "end" }}>{description}</div>}
       {tech && <div style={{ alignSelf: "start" }}>{tech}</div>}
       {siteUrl && codeUrl && (
@@ -12,7 +12,7 @@ function Info({ description, tech, siteUrl, codeUrl }) {
             href={siteUrl}
             target="_blank"
             rel="noreferrer"
-            className="btn blue"
+            className="btn blue waves-effect"
           >
             site
           </a>
@@ -20,7 +20,7 @@ function Info({ description, tech, siteUrl, codeUrl }) {
             href={codeUrl}
             target="_blank"
             rel="noreferrer"
-            className="btn blue"
+            className="btn blue waves-effect"
           >
             code
           </a>
