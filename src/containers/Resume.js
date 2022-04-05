@@ -19,7 +19,6 @@ function debounce(fn, ms) {
 }
 
 function width() {
-  console.log("width", window.innerWidth);
   const innerWidth = window.innerWidth;
   if (innerWidth < 600) return window.innerWidth * 0.9;
 
@@ -29,7 +28,7 @@ function width() {
 }
 
 function height() {
-  return width() * (23 / 8.5);
+  return Math.min(width() * (22 / 8.5), 2200);
 }
 
 function Resume() {
@@ -64,14 +63,14 @@ function Resume() {
         </li>
       </ul>
       <div id="resume-container">
-        <object
-          data="./media/J. Michael Brown - Resume.pdf"
+        <iframe
+          title="resume"
+          src="./media/J. Michael Brown - Resume.pdf#page=2"
           type="application/pdf"
-          width={dimensions.width}
+          page="2"
+          width="100%"
           height={dimensions.height}
-        >
-          <div>No online PDF viewer installed</div>
-        </object>
+        />
       </div>
       <p>
         <a href="./media/J. Michael Brown - Resume.pdf" download>
