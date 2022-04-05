@@ -1,4 +1,5 @@
 import NavLink from "../components/NavLink";
+import "./Nav.css";
 
 const styles = {
   display: "grid",
