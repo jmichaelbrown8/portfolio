@@ -23,7 +23,7 @@ function Footer() {
       </a>
       <a
         className="yellow darken-1"
-        href="https://www.instagram.com/kodachromeiphone"
+        href="https://www.instagram.com/monochromeiphone"
         target="_blank"
         rel="noreferrer"
       >
@@ -31,19 +31,19 @@ function Footer() {
       </a>
       <a
         className="green"
+        href="https://www.instagram.com/kodachromeiphone"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FontAwesomeIcon className="fa-2x" icon={brands("instagram")} />
+      </a>
+      <a
+        className="blue"
         href="https://twitter.com/jmichaelcodes"
         target="_blank"
         rel="noreferrer"
       >
         <FontAwesomeIcon className="fa-2x" icon={brands("twitter")} />
-      </a>
-      <a
-        className="blue"
-        href="https://www.instagram.com/monochromeiphone"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon className="fa-2x" icon={brands("instagram")} />
       </a>
     </footer>
   );

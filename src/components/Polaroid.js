@@ -30,15 +30,7 @@ function Info({ description, tech, siteUrl, codeUrl }) {
   );
 }
 
-function Polaroid({
-  imageUrl,
-  title,
-  description,
-  siteUrl,
-  codeUrl,
-  highlight,
-  tech,
-}) {
+function Polaroid({ imageUrl, title, description, siteUrl, codeUrl, tech }) {
   const myStyles = {
     backgroundImage: `url(${imageUrl})`,
   };
@@ -46,7 +38,9 @@ function Polaroid({
   const [active, setActive] = useState(false);
 
   const makeActive = () => {
-    setActive(true);
+    if (description || siteUrl || codeUrl || tech) {
+      setActive(true);
+    }
   };
 
   const makeInactive = () => {
@@ -66,7 +60,6 @@ function Polaroid({
             tech={tech}
             siteUrl={siteUrl}
             codeUrl={codeUrl}
-            highlight={highlight}
           />
         ) : null}
       </div>
