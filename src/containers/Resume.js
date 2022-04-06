@@ -6,6 +6,9 @@ const styles = {
     display: "grid",
     gridTemplateRows: "auto",
   },
+  image: {
+    width: "100%",
+  },
 };
 
 function debounce(fn, ms) {
@@ -65,6 +68,23 @@ function Resume() {
           Improvement
         </li>
       </ul>
+      <p>
+        <a href="./media/J. Michael Brown - Resume.pdf" download>
+          Download Resume
+          <div id="ios-resume-container">
+            <img
+              style={styles.image}
+              src="./media/J. Michael Brown - Resume - page 1.png"
+              alt="resume page 1"
+            />
+            <img
+              style={styles.image}
+              src="./media/J. Michael Brown - Resume - page 2.png"
+              alt="resume page 2"
+            />
+          </div>
+        </a>
+      </p>
       <div id="resume-container">
         <iframe
           title="resume"
@@ -74,27 +94,6 @@ function Resume() {
           height={dimensions.height}
         />
       </div>
-      <div id="ios-resume-container">
-        <iframe
-          title="resume"
-          src="./media/J. Michael Brown - Resume - page 1.pdf"
-          type="application/pdf"
-          width="100%"
-          height={dimensions.height}
-        />
-        <iframe
-          title="resume"
-          src="./media/J. Michael Brown - Resume - page 2.pdf"
-          type="application/pdf"
-          width="100%"
-          height={dimensions.height}
-        />
-      </div>
-      <p>
-        <a href="./media/J. Michael Brown - Resume.pdf" download>
-          Download Resume
-        </a>
-      </p>
     </section>
   );
 }
