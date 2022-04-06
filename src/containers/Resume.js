@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Resume.css";
 
 const styles = {
   container: {
@@ -28,6 +29,8 @@ function width() {
 }
 
 function height() {
+  // returns the correct height aspect ratio given a two-page
+  // resume and the width calculation
   return Math.min(width() * (22 / 8.5), 2200);
 }
 
@@ -65,9 +68,24 @@ function Resume() {
       <div id="resume-container">
         <iframe
           title="resume"
-          src="./media/J. Michael Brown - Resume.pdf#page=2"
+          src="./media/J. Michael Brown - Resume.pdf"
           type="application/pdf"
-          page="2"
+          width="100%"
+          height={dimensions.height}
+        />
+      </div>
+      <div id="ios-resume-container">
+        <iframe
+          title="resume"
+          src="./media/J. Michael Brown - Resume - page 1.pdf"
+          type="application/pdf"
+          width="100%"
+          height={dimensions.height}
+        />
+        <iframe
+          title="resume"
+          src="./media/J. Michael Brown - Resume - page 2.pdf"
+          type="application/pdf"
           width="100%"
           height={dimensions.height}
         />

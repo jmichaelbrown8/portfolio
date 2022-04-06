@@ -1,0 +1,16 @@
+/* hide the ios-specific resume container by default */
+#ios-resume-container {
+  display: none;
+}
+
+/* this media query targets iOS devices only */
+@supports (-webkit-touch-callout: none) {
+  /* hide the normal resume container */
+  #resume-container {
+    display: none;
+  }
+  /* display the ios-specific resume container */
+  #ios-resume-container {
+    display: block;
+  }
+}
