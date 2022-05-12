@@ -18,13 +18,13 @@ function Nav({ currentPage, handlePageChange }) {
       />
       <NavLink
         className="orange"
-        text="front end"
+        text="projects"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />
       <NavLink
         className="yellow darken-1 black-text"
-        text="back end"
+        text="photos"
         handlePageChange={handlePageChange}
         currentPage={currentPage}
       />

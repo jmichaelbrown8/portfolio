@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jmichaelbrown.codes",
   "dependencies": {
+    "@formspree/react": "^2.2.5",
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",

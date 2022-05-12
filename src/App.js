@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Header from "./containers/Header";
 import About from "./containers/About";
-import FrontEnd from "./containers/FrontEnd";
-import BackEnd from "./containers/BackEnd";
+import Projects from "./containers/Projects";
+import Photos from "./containers/Photos";
 import Contact from "./containers/Contact";
 import Resume from "./containers/Resume";
 import Footer from "./containers/Footer";
@@ -28,10 +28,10 @@ function App() {
     switch (currentPage) {
       case "about":
         return <About setCurrentPage={setCurrentPage} />;
-      case "front end":
-        return <FrontEnd />;
-      case "back end":
-        return <BackEnd />;
+      case "projects":
+        return <Projects />;
+      case "photos":
+        return <Photos />;
       case "contact":
         return <Contact />;
       case "resume":

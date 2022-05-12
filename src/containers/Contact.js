@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { useForm, ValidationError } from "@formspree/react";
 import "./Contact.css";
 import validateEmail from "../utils/validateEmail";
 
@@ -9,6 +10,9 @@ const styles = {
 };
 
 function Contact() {
+  // formspree id
+  const [state, handleSubmit] = useForm("xoqrywrn");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -25,13 +29,24 @@ function Contact() {
       : e.target.classList.toggle("invalid", true);
   };
 
+  if (state.succeeded) {
+    return (
+      <section className="container" style={styles}>
+        <h5 style={{ textAlign: "center" }}>
+          Thanks for your message, {name}!
+        </h5>
+      </section>
+    );
+  }
+
   return (
     <section className="container" style={styles}>
-      <form className="col s12">
+      <form className="col s12" onSubmit={handleSubmit}>
         <div className="row">
           <div className="input-field col s6">
             <input
               id="name"
+              name="name"
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -41,6 +56,7 @@ function Contact() {
               type="text"
             />
             <label htmlFor="name">Name</label>
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
             <span
               className="helper-text"
               data-error="Please enter a name"
@@ -50,6 +66,7 @@ function Contact() {
           <div className="input-field col s6">
             <input
               id="email"
+              name="email"
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -59,6 +76,11 @@ function Contact() {
               type="email"
             />
             <label htmlFor="email">Email</label>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <span
               className="helper-text"
               data-error="Please enter a valid email address"
@@ -81,6 +103,11 @@ function Contact() {
             <label htmlFor="message" className="">
               Message
             </label>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
             <span
               className="helper-text"
               data-error="Please enter a message"
@@ -94,6 +121,7 @@ function Contact() {
               className="btn waves-effect waves-light blue"
               type="submit"
               name="action"
+              disabled={state.submitting}
             >
               send <FontAwesomeIcon icon={solid("paper-plane")} />
             </button>

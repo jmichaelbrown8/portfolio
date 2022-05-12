@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import "./Resume.css";
 
 const styles = {
@@ -8,6 +10,12 @@ const styles = {
   },
   image: {
     width: "100%",
+  },
+  skills: {
+    display: "grid",
+    gridAutoFlow: "column",
+    justifyContent: "space-between",
+    margin: "2rem 0",
   },
 };
 
@@ -58,33 +66,30 @@ function Resume() {
   });
   return (
     <section className="container" style={styles.container}>
-      <h3>Skills</h3>
-      <ul>
-        <li>JavaScript, Python, HTML, CSS, SQL, MongoDB</li>
-        <li>NodeJS, Express, React, jQuery, Bootstrap, GraphQL</li>
-        <li>AWS: Cloudfront, Route53, S3, Lambda, EC2, Cloudformation</li>
-        <li>
-          Meeting Facilitation, Story Mapping, Wireframing, Leading Continuous
-          Improvement
-        </li>
-      </ul>
-      <p>
-        <a href="./media/J. Michael Brown - Resume.pdf" download>
-          Download Resume
-          <div id="ios-resume-container">
-            <img
-              style={styles.image}
-              src="./media/J. Michael Brown - Resume - page 1.png"
-              alt="resume page 1"
-            />
-            <img
-              style={styles.image}
-              src="./media/J. Michael Brown - Resume - page 2.png"
-              alt="resume page 2"
-            />
-          </div>
-        </a>
-      </p>
+      <div style={styles.skills}>
+        <FontAwesomeIcon className="fa-2x" icon={brands("js")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("html5")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("css3-alt")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("node")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("react")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("bootstrap")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("python")} />
+        <FontAwesomeIcon className="fa-2x" icon={brands("aws")} />
+      </div>
+      <a href="./media/J. Michael Brown - Resume.pdf" download>
+        <div id="ios-resume-container">
+          <img
+            style={styles.image}
+            src="./media/J. Michael Brown - Resume - page 1.png"
+            alt="resume page 1"
+          />
+          <img
+            style={styles.image}
+            src="./media/J. Michael Brown - Resume - page 2.png"
+            alt="resume page 2"
+          />
+        </div>
+      </a>
       <div id="resume-container">
         <iframe
           title="resume"
