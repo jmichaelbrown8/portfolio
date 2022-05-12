@@ -66,14 +66,6 @@ const work = [
     codeUrl: "https://github.com/jmichaelbrown8/grill",
   },
   {
-    imageUrl: "/media/portfolio.png",
-    title: "Portfolio",
-    tech: "React and Materialize CSS library.",
-    description: "A portfolio to showcase some of my projects.",
-    siteUrl: "https://jmichaelbrown.codes/",
-    codeUrl: "https://github.com/jmichaelbrown8/portfolio",
-  },
-  {
     imageUrl: "/media/globalstandup.png",
     title: "Global Stand-Up",
     tech: "NodeJS, Express, Mongoose, and MongoDB.",
