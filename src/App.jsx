@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./containers/Header";
 import About from "./containers/About";
 import Projects from "./containers/Projects";
@@ -22,21 +22,33 @@ const styles = {
 };
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("about");
+  const [currentPage, setCurrentPage] = useState(
+    window.location.hash || "#about"
+  );
+
+  useEffect(() => {
+    window.addEventListener("popstate", (event) => {
+      setCurrentPage(event.target.location.hash);
+    });
+
+    return () => {
+      window.removeEventListener("popstate");
+    };
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
-      case "about":
+      case "#about":
         return <About setCurrentPage={setCurrentPage} />;
-      case "projects":
+      case "#projects":
         return <Projects />;
-      case "photos":
+      case "#photos":
         return <Photos />;
-      case "contact":
+      case "#contact":
         return <Contact />;
-      case "resume":
+      case "#resume":
         return <Resume />;
-      case "film":
+      case "#film":
         return <Film />;
       default:
         return;

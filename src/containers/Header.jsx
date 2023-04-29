@@ -1,3 +1,4 @@
+import React from "react";
 import PolaroidLogo from "../components/PolaroidLogo";
 import Nav from "./Nav";
 

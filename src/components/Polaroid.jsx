@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Polaroid.css";
 
 function Info({ description, tech, siteUrl, codeUrl }) {
@@ -6,26 +6,29 @@ function Info({ description, tech, siteUrl, codeUrl }) {
     <div className="container info white-text">
       {description && <div style={{ alignSelf: "end" }}>{description}</div>}
       {tech && <div style={{ alignSelf: "start" }}>{tech}</div>}
-      {siteUrl && codeUrl && (
-        <div className="links">
+
+      <div className="links">
+        {siteUrl && (
           <a
             href={siteUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn blue waves-effect"
           >
             site
           </a>
+        )}
+        {codeUrl && (
           <a
             href={codeUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn blue waves-effect"
           >
             code
           </a>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

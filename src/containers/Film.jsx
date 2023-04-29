@@ -1,3 +1,5 @@
+import React from "react";
+
 function Film() {
   return (
     <video width="100%" autoPlay controls>

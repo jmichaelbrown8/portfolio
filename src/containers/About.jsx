@@ -1,3 +1,4 @@
+import React from "react";
 import Polaroid from "../components/Polaroid";
 import "./About.css";
 
@@ -21,9 +22,8 @@ function About({ setCurrentPage }) {
       />
       <div>
         <p>
-          Agile software delivery expert, with 4 years of front end web
-          development experience and 6 years of software team process
-          leadership.
+          Full stack web developer with over a decade of software industry
+          experience delivering cloud-based solutions.
         </p>
         <p>
           Enthusiastic about teaching, mentoring, coaching, and continuing to
@@ -42,7 +42,7 @@ function About({ setCurrentPage }) {
           <a
             href="https://soundcloud.com/j-michael-brown-304158742"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             music
           </a>
@@ -50,7 +50,7 @@ function About({ setCurrentPage }) {
           <a
             href="#film"
             onClick={() => {
-              setCurrentPage("film");
+              setCurrentPage("#film");
             }}
           >
             animation
@@ -59,7 +59,7 @@ function About({ setCurrentPage }) {
           <a
             href="https://www.instagram.com/monochromeiphone/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {" "}
             photography{" "}
@@ -67,7 +67,7 @@ function About({ setCurrentPage }) {
           <a
             href="https://www.instagram.com/kodachromeiphone/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             (2)
           </a>
