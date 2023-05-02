@@ -23,8 +23,8 @@ export const About = ({ setCurrentPage }: any) => {
           decisions.
         </p>
         <p>
-          Experienced in HTML, CSS, JavaScript, Node, Python, SQL, MongoDB,
-          React, and AWS.
+          Experienced in React, Typescript, JavaScript, HTML, CSS, NodeJS,
+          Python, Java, and AWS.
         </p>
         <p>
           Background in{" "}
