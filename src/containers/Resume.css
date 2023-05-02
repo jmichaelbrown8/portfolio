@@ -1,3 +1,19 @@
+.resume.container {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.resume img {
+  width: 100%;
+}
+
+.resume .skills {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
 /* hide the ios-specific resume container by default */
 #ios-resume-container {
   display: none;

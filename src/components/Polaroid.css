@@ -90,6 +90,17 @@
   }
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  gap: 2em;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+
 /* Devices smaller than 480px wide */
 @media screen and (max-width: 480px) {
   .frame {

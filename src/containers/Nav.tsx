@@ -1,16 +1,15 @@
 import React from "react";
-import NavLink from "../components/NavLink";
+import { NavLink } from "../components/NavLink";
 import "./Nav.css";
 
-const styles = {
-  display: "grid",
-  gridAutoFlow: "column",
-  gridTemplateColumns: "repeat(5, 1fr)",
-};
+export interface NavProps {
+  currentPage: any;
+  handlePageChange: any;
+}
 
-function Nav({ currentPage, handlePageChange }) {
+export const Nav = ({ currentPage, handlePageChange }: NavProps) => {
   return (
-    <nav className="grey darken-3 z-depth-0" style={styles}>
+    <nav className="grey darken-3 z-depth-0">
       <NavLink
         className="red"
         text="about"
@@ -43,6 +42,4 @@ function Nav({ currentPage, handlePageChange }) {
       />
     </nav>
   );
-}
-
-export default Nav;
+};

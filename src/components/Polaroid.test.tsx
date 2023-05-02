@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Polaroid from "./Polaroid";
+import { Polaroid } from "./Polaroid";
 
 test("renders no text without props", () => {
   render(<Polaroid />);

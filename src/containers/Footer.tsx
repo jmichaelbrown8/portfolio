@@ -3,7 +3,7 @@ import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-function Footer() {
+export const Footer = () => {
   return (
     <footer>
       <a
@@ -48,6 +48,4 @@ function Footer() {
       </a>
     </footer>
   );
-}
-
-export default Footer;
+};

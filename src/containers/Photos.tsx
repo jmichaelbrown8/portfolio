@@ -1,16 +1,6 @@
 import React from "react";
-import Polaroid from "../components/Polaroid";
-
-const styles = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, 25rem)",
-  gap: "2em",
-  justifyItems: "center",
-  alignItems: "center",
-  justifyContent: "center",
-  alignContent: "center",
-  padding: "2em",
-};
+import { Polaroid } from "../components/Polaroid";
+import "../components/Polaroid.css";
 
 const photos = [
   "media/photos/201609.jpg",
@@ -20,7 +10,7 @@ const photos = [
   "media/photos/1742479.jpg",
   "media/photos/1742670.jpg",
   "media/photos/1742725.jpg",
-  // "media/photos/1743070.jpg",
+  "media/photos/1743070.jpg",
   // "media/photos/10499267.jpg",
   // "media/photos/10518208.jpg",
   // "media/photos/10520167.jpg",
@@ -51,14 +41,12 @@ const photos = [
 
 const work = photos.map((photo) => ({ imageUrl: photo }));
 
-function Photos() {
+export const Photos = () => {
   return (
-    <section style={styles} className="gallery">
+    <section className="gallery">
       {work.map((workItem) => (
-        <Polaroid key={workItem.imageUrl} {...workItem} highlight="yellow" />
+        <Polaroid key={workItem.imageUrl} {...workItem} />
       ))}
     </section>
   );
-}
-
-export default Photos;
+};

@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React, { FocusEventHandler, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { useForm, ValidationError } from "@formspree/react";
 import "./Contact.css";
-import validateEmail from "../utils/validateEmail";
+import { validateEmail as isValidEmail } from "../utils/validateEmail";
 
-const styles = {
-  padding: "5em 0",
-};
-
-function Contact() {
+export const Contact = () => {
   // formspree id
   const [state, handleSubmit] = useForm("xoqrywrn");
 
@@ -17,21 +13,25 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const validateRequired = (e) => {
-    e.target.value
-      ? e.target.classList.toggle("invalid", false)
-      : e.target.classList.toggle("invalid", true);
+  const validateRequired: FocusEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = ({ target: element }) => {
+    element.value
+      ? element.classList.toggle("invalid", false)
+      : element.classList.toggle("invalid", true);
   };
 
-  const validateRequiredEmail = (e) => {
-    validateEmail(email)
-      ? e.target.classList.toggle("invalid", false)
-      : e.target.classList.toggle("invalid", true);
+  const validateEmail: FocusEventHandler<HTMLInputElement> = ({
+    target: element,
+  }) => {
+    isValidEmail(email)
+      ? element.classList.toggle("invalid", false)
+      : element.classList.toggle("invalid", true);
   };
 
   if (state.succeeded) {
     return (
-      <section className="container" style={styles}>
+      <section className="container">
         <h5 style={{ textAlign: "center" }}>
           Thanks for your message, {name}!
         </h5>
@@ -40,7 +40,7 @@ function Contact() {
   }
 
   return (
-    <section className="container" style={styles}>
+    <section className="container">
       <form className="col s12" onSubmit={handleSubmit}>
         <div className="row">
           <div className="input-field col s6">
@@ -71,7 +71,7 @@ function Contact() {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
-              onBlur={validateRequiredEmail}
+              onBlur={validateEmail}
               className="validate"
               type="email"
             />
@@ -130,6 +130,4 @@ function Contact() {
       </form>
     </section>
   );
-}
-
-export default Contact;
+};

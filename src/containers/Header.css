@@ -1,0 +1,6 @@
+header {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  text-align: center;
+}

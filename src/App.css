@@ -1,0 +1,11 @@
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+}
+
+main {
+  display: grid;
+}

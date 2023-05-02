@@ -1,6 +1,6 @@
 import React from "react";
 
-function Film() {
+export const Film = () => {
   return (
     <video width="100%" autoPlay controls>
       <source src="./media/CAT124_JMICHAEL_Final.mp4" type="video/mp4" />
@@ -9,6 +9,4 @@ function Film() {
       <a href="./media/CAT124_JMICHAEL_Final.mov">Download</a>
     </video>
   );
-}
-
-export default Film;
+};

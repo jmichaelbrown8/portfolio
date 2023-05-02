@@ -1,21 +1,10 @@
 import React from "react";
-import Polaroid from "../components/Polaroid";
+import { Polaroid } from "../components/Polaroid";
 import "./About.css";
 
-const styles = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, 25em)",
-  justifyItems: "center",
-  alignItems: "center",
-  justifyContent: "space-evenly",
-  padding: "2rem",
-  gap: "2rem",
-  fontSize: "1rem",
-};
-
-function About({ setCurrentPage }) {
+export const About = ({ setCurrentPage }: any) => {
   return (
-    <section id="about-me" style={styles}>
+    <section id="about-me">
       <Polaroid
         imageUrl={"/media/headshot.jpg"}
         title={<em>Yep, my name really is just the letter J.!</em>}
@@ -76,6 +65,4 @@ function About({ setCurrentPage }) {
       </div>
     </section>
   );
-}
-
-export default About;
+};

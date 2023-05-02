@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 import "./Polaroid.css";
 
-function Info({ description, tech, siteUrl, codeUrl }) {
+interface InfoProps {
+  description?: string;
+  tech?: string;
+  siteUrl?: string;
+  codeUrl?: string;
+}
+
+export interface PolaroidProps extends InfoProps {
+  imageUrl?: string;
+  title?: React.ReactNode;
+}
+
+const Info = ({ description, tech, siteUrl, codeUrl }: InfoProps) => {
   return (
     <div className="container info white-text">
       {description && <div style={{ alignSelf: "end" }}>{description}</div>}
@@ -31,9 +43,16 @@ function Info({ description, tech, siteUrl, codeUrl }) {
       </div>
     </div>
   );
-}
+};
 
-function Polaroid({ imageUrl, title, description, siteUrl, codeUrl, tech }) {
+export const Polaroid = ({
+  imageUrl,
+  title,
+  description,
+  siteUrl,
+  codeUrl,
+  tech,
+}: PolaroidProps) => {
   const myStyles = {
     backgroundImage: `url(${imageUrl})`,
   };
@@ -69,6 +88,4 @@ function Polaroid({ imageUrl, title, description, siteUrl, codeUrl, tech }) {
       <div className="label">{title ? <h3>{title}</h3> : null}</div>
     </div>
   );
-}
-
-export default Polaroid;
+};

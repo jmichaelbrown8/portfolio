@@ -1,6 +1,18 @@
 import React from "react";
 
-function NavLink({ className, text, currentPage, handlePageChange }) {
+interface NavLinkProps {
+  className: string;
+  text: string;
+  currentPage: string;
+  handlePageChange: any;
+}
+
+export const NavLink = ({
+  className,
+  text,
+  currentPage,
+  handlePageChange,
+}: NavLinkProps) => {
   const hash = `#${text}`;
   return (
     <a
@@ -11,6 +23,4 @@ function NavLink({ className, text, currentPage, handlePageChange }) {
       {text}
     </a>
   );
-}
-
-export default NavLink;
+};

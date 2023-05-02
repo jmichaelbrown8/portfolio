@@ -1,16 +1,6 @@
 import React from "react";
-import Polaroid from "../components/Polaroid";
-
-const styles = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, 25rem)",
-  gap: "2em",
-  justifyItems: "center",
-  alignItems: "center",
-  justifyContent: "center",
-  alignContent: "center",
-  padding: "2em",
-};
+import { Polaroid } from "../components/Polaroid";
+import "../components/Polaroid.css";
 
 const work = [
   {
@@ -98,14 +88,12 @@ const work = [
   },
 ];
 
-function Projects() {
+export const Projects = () => {
   return (
-    <section style={styles} className="gallery">
+    <section className="gallery">
       {work.map((workItem) => (
         <Polaroid key={workItem.title} {...workItem} />
       ))}
     </section>
   );
-}
-
-export default Projects;
+};
