@@ -9,7 +9,7 @@ interface InfoProps {
 }
 
 export interface PolaroidProps extends InfoProps {
-  imageUrl?: string;
+  imageUrl: string;
   title?: React.ReactNode;
 }
 
@@ -22,6 +22,7 @@ const Info = ({ description, tech, siteUrl, codeUrl }: InfoProps) => {
       <div className="links">
         {siteUrl && (
           <a
+            data-testid="site-link"
             href={siteUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -32,6 +33,7 @@ const Info = ({ description, tech, siteUrl, codeUrl }: InfoProps) => {
         )}
         {codeUrl && (
           <a
+            data-testid="code-link"
             href={codeUrl}
             target="_blank"
             rel="noopener noreferrer"

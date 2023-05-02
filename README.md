@@ -2,11 +2,12 @@
 
 By J. Michael Brown https://jmichaelbrowncodes.com
 
-A React single page app to display a selection of coding projects, some information about me, and my contact information. Styling inspired by Polaroid.
+A React/Typescript single page app to display a selection of coding projects, some information about me, and my contact information. Styling inspired by Polaroid.
 
 ## Technologies Used
 
 - React
+- Typescript
 - Materialize CSS Library
 
 ## Setup
