@@ -1,3 +1,5 @@
+Note: I recently migrated this site to Next.js deployed to Vercel instead of GitHub Pages. Read more about the migration on [the new site](https://jmichaelbrowncodes.com/posts/site-rewrite)
+
 # 👨‍💻 portfolio
 
 By J. Michael Brown https://jmichaelbrowncodes.com
@@ -22,9 +24,11 @@ A React/Typescript single page app to display a selection of coding projects, so
 
 ## Deployment
 
-- `npm run deploy`
+- ~`npm run deploy`~
 
-This portfolio is deployed using GitHub pages with a CNAME to: [https://jmichaelbrowncodes.com](https://jmichaelbrowncodes.com)
+~This portfolio is deployed using GitHub pages with a CNAME to: [https://jmichaelbrowncodes.com](https://jmichaelbrowncodes.com)~
+
+*This site has migrated to Next.js, deployed to Vercel
 
 <img src="./public/media/portfolio.png" alt="Screenshot" />
 
